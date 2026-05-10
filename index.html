@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>2026 Batch</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:linear-gradient(135deg,#050816,#0b1229,#111c44);
+    color:white;
+    padding:40px 20px;
+}
+
+.container{
+    max-width:1400px;
+    margin:auto;
+}
+
+.header{
+    text-align:center;
+    margin-bottom:50px;
+}
+
+.header h1{
+    font-size:70px;
+    background:linear-gradient(to right,#4da3ff,#ffffff);
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+}
+
+.header p{
+    margin-top:15px;
+    opacity:0.8;
+    font-size:18px;
+    line-height:1.8;
+}
+
+/* GROUP PHOTO */
+
+.group-photo{
+    margin-top:40px;
+    text-align:center;
+}
+
+.group-photo img{
+    width:100%;
+    max-width:1000px;
+    border-radius:30px;
+    border:3px solid rgba(255,255,255,0.1);
+    box-shadow:0 0 35px rgba(77,163,255,0.2);
+}
+
+.group-photo h2{
+    margin-top:20px;
+    font-size:35px;
+    color:#4da3ff;
+}
+
+.group-photo h4{
+    margin-top:15px;
+    opacity:0.8;
+    font-weight:300;
+    line-height:1.8;
+}
+
+/* NAMES BOX */
+
+.names-box{
+    max-width:1000px;
+    margin:35px auto 0;
+    background:rgba(255,255,255,0.06);
+    border:1px solid rgba(255,255,255,0.08);
+    border-radius:25px;
+    padding:35px;
+    text-align:center;
+    line-height:2.2;
+    font-size:18px;
+}
+
+/* SECTION */
+
+.section-title{
+    text-align:center;
+    font-size:35px;
+    margin:70px 0 30px;
+    color:#4da3ff;
+}
+
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+    gap:25px;
+}
+
+.card{
+    background:rgba(255,255,255,0.06);
+    border:1px solid rgba(255,255,255,0.08);
+    border-radius:25px;
+    padding:25px;
+    text-align:center;
+    backdrop-filter:blur(10px);
+    transition:0.4s;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 0 25px rgba(77,163,255,0.25);
+}
+
+.card img{
+    width:120px;
+    height:120px;
+    border-radius:50%;
+    object-fit:cover;
+    border:3px solid #4da3ff;
+    margin-bottom:15px;
+}
+
+.card h3{
+    margin-bottom:8px;
+    font-size:22px;
+}
+
+.card p{
+    opacity:0.8;
+    font-size:14px;
+    line-height:1.6;
+}
+
+.footer{
+    text-align:center;
+    margin-top:60px;
+    opacity:0.7;
+    font-size:15px;
+}
+
+@media(max-width:768px){
+
+.header h1{
+    font-size:45px;
+}
+
+.section-title{
+    font-size:28px;
+}
+
+.group-photo h2{
+    font-size:28px;
+}
+
+.names-box{
+    font-size:16px;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- HEADER -->
+
+    <div class="header">
+
+        <h1>2026 Batch</h1>
+
+        <p>
+            Department of Computer Science <br>
+            BCA
+        </p>
+
+    </div>
+
+    <!-- GROUP PHOTO -->
+
+    <div class="group-photo">
+
+       
+
+        <h4>
+
+            Three years filled with memories, laughter, assignments,
+            friendships and unforgettable moments.  
+            This page is a small memory of our beautiful college life 
+
+        </h4>
+
+        <!-- REPLACE THIS IMAGE WITH YOUR CLASS PHOTO -->
+
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQeqZ2EqxpBDPwp7-mw0VBaoSMttJesfkpn9g&s">
+
+        <h2>Our BCA Family</h2>
+
+        <h4>
+            We came here as strangers, going as family ??
+        </h4>
+
+        <!-- STUDENT NAMES -->
+
+        <div class="names-box">
+
+            Abhishek ck • Ashwini • chandana • cheluvanarayan •  <br><br>
+
+            Akash • Kiran • Manoj • Nithin • Praveen <br><br>
+
+            Darshan • Sagar • Arjun • Varun • Rakesh <br><br>
+
+            Sanjay • Deepak • Harish • Vishal • Naveen <br><br>
+
+            Karthik • Yash • Aditya • Suraj • Rohan
+
+        </div>
+
+    </div>
+
+    <!-- PRINCIPAL -->
+
+    <h2 class="section-title">Principal</h2>
+
+    <div class="grid">
+
+        <div class="card">
+
+            <a href="https://ibb.co/V6kxLVV"><img src="https://i.ibb.co/DdjY144/principal.jpg" alt="principal" border="0"></a>
+            <h3>DR MALLESH S</h3>
+
+            <p>
+                Thank you for your support and guidance.
+            </p>
+
+        </div>
+
+    </div>
+
+    <!-- LECTURERS -->
+
+    <h2 class="section-title">Lecturers</h2>
+
+    <div class="grid">
+
+        <div class="card">
+
+            <img src="https://i.prav">
+
+            <h3>MRS HEMALATHA TS</h3>
+
+            <p>Computer Science Department</p>
+
+        </div>
+
+        <div class="card">
+
+            <img src="https://i.pravata">
+
+            <h3>MRS RUPALI KIRAN </h3>
+
+            <p>Computer Science Department</p>
+
+        </div>
+
+        <div class="card">
+
+            <img src="https://i.prava">
+
+            <h3>MS NISARGA</h3>
+
+            <p>Computer Science Department</p>
+
+        </div>
+
+        <div class="card">
+
+            <img src="https://i.pravata">
+
+            <h3>MRS HAMSARAJ</h3>
+
+            <p>Computer Science Department</p>
+
+        </div>
+
+        <div class="card">
+
+            <img src="https://i.prav">
+
+            <h3>MRS PADMA </h3>
+
+            <p>Computer Science Department</p>
+
+        </div>
+
+    </div>
+
+    <!-- FOOTER -->
+
+    <div class="footer">
+        All Rights Reserved @ theloser0000
+    </div>
+
+</div>
+
+</body>
+</html>
