@@ -325,20 +325,65 @@ body::after{
 
 /* Music Button */
 
+/* FLOATING MUSIC BUTTON */
+
 .music-btn{
+
     position:fixed;
     right:25px;
     bottom:25px;
-    width:60px;
-    height:60px;
+
+    width:75px;
+    height:75px;
+
     border:none;
     border-radius:50%;
-    background:#4da3ff;
+
+    background:linear-gradient(135deg,#4da3ff,#00d4ff);
+
     color:white;
-    font-size:22px;
+    font-size:32px;
     cursor:pointer;
-    box-shadow:0 0 25px rgba(77,163,255,0.5);
-    z-index:999;
+
+    z-index:9999;
+
+    box-shadow:
+    0 0 20px rgba(77,163,255,0.6),
+    0 0 40px rgba(77,163,255,0.5);
+
+    animation:musicFloat 2s ease-in-out infinite;
+
+    transition:0.3s;
+}
+
+/* Hover Effect */
+
+.music-btn:hover{
+
+    transform:scale(1.15);
+
+    box-shadow:
+    0 0 30px rgba(77,163,255,0.9),
+    0 0 60px rgba(77,163,255,0.7);
+
+}
+
+/* Floating Animation */
+
+@keyframes musicFloat{
+
+    0%{
+        transform:translateY(0px);
+    }
+
+    50%{
+        transform:translateY(-12px);
+    }
+
+    100%{
+        transform:translateY(0px);
+    }
+
 }
 
 /* Footer */
@@ -462,7 +507,7 @@ body::after{
 
         Abhishek CK • Punith • Ashwini • Chandana • Cheluvanarayan <br><br>
 
-        Gagana • Geethashree • Harshith • Kirana • Vijayalakshmi <br><br>
+        Gagana • Geethashree • Harshith • Kruthi • Kirana • Vijayalakshmi <br><br>
 
         Manasa • Ganavi • Navya • Nethra • Rakshitha DM <br><br>
 
