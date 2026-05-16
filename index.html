@@ -444,41 +444,13 @@ body::after{
 <body>
 
 <!-- Music -->
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<!-- Music -->
 
-<script>
+<audio id="bgmusic" loop autoplay>
+    <source src="music.mp3" type="audio/mp3">
+</audio>
 
-AOS.init({
-    duration:1200,
-    once:true
-});
-
-const music = document.getElementById("bgmusic");
-
-window.onload = () => {
-
-    // autoplay muted
-    music.play();
-
-    // unmute after 1 second
-    setTimeout(() => {
-        music.muted = false;
-        music.volume = 1;
-    }, 1000);
-
-};
-
-function toggleMusic(){
-
-    if(music.paused){
-        music.play();
-    } else {
-        music.pause();
-    }
-
-}
-
-</script>
+<button class="music-btn" onclick="toggleMusic()">🎵</button>
 <div class="container">
 
 <!-- Navbar -->
@@ -701,6 +673,8 @@ EAST WEST BUSINESS SCHOOL will always remain a special part of our lives. This c
 
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
 <script>
 
 AOS.init({
@@ -708,9 +682,31 @@ AOS.init({
     once:true
 });
 
+window.addEventListener("load", () => {
+
+    const music = document.getElementById("bgmusic");
+
+    music.volume = 1;
+
+    let playPromise = music.play();
+
+    if(playPromise !== undefined){
+
+        playPromise.catch(() => {
+
+            document.addEventListener("click", () => {
+                music.play();
+            }, { once:true });
+
+        });
+
+    }
+
+});
+
 function toggleMusic(){
 
-    const music=document.getElementById('bgmusic');
+    const music = document.getElementById("bgmusic");
 
     if(music.paused){
         music.play();
