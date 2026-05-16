@@ -198,6 +198,14 @@ body::after{
     gap:30px;
 }
 
+/* Single Feature Block Configuration (Centered layouts) */
+.single-feature-block {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    max-width: 900px;
+}
+
 .card{
     background:rgba(255,255,255,0.06);
     border:1px solid rgba(255,255,255,0.08);
@@ -207,6 +215,7 @@ body::after{
     backdrop-filter:blur(12px);
     transition:0.4s;
     box-shadow:0 0 20px rgba(77,163,255,0.08);
+    width: 100%;
 }
 
 .card:hover{
@@ -224,8 +233,17 @@ body::after{
     transition:0.4s;
 }
 
+/* Modern widescreen update for the building focus card */
+.card img.college-landscape {
+    width: 100%;
+    max-width: 550px;
+    height: 220px;
+    border-radius: 20px;
+    object-fit: cover;
+}
+
 .card img:hover{
-    transform:scale(1.08);
+    transform:scale(1.04);
     box-shadow:0 0 30px #4da3ff;
 }
 
@@ -450,7 +468,6 @@ body::after{
 </head>
 <body>
 
-<!-- Background Music -->
 <audio id="bgmusic" loop autoplay>
     <source src="music.mp3" type="audio/mp3">
 </audio>
@@ -459,7 +476,6 @@ body::after{
 
 <div class="container">
 
-<!-- Navbar -->
 <nav class="navbar">
     <ul>
         <li><a href="#home">Home</a></li>
@@ -470,14 +486,12 @@ body::after{
     </ul>
 </nav>
 
-<!-- Header -->
 <div class="header" id="home" data-aos="fade-up">
     <div class="college-name">EAST WEST BUSINESS SCHOOL</div>
     <h1>BCA 2026</h1>
     <div class="quote">“Every ending creates a beautiful memory.”</div>
 </div>
 
-<!-- Group Photo -->
 <div class="group-photo" id="family" data-aos="zoom-in">
     <h4>
         Three years filled with memories, laughter, assignments,
@@ -500,12 +514,10 @@ body::after{
     </div>
 </div>
 
-<!-- Memory Quote -->
 <div class="memory-quote" data-aos="fade-up">
     “Some people come into our life and leave footprints forever.”
 </div>
 
-<!-- Timeline -->
 <h2 class="section-title" id="timeline">Journey Timeline</h2>
 <div class="timeline">
     <div class="timeline-item" data-aos="fade-right">
@@ -534,22 +546,19 @@ body::after{
     </div>
 </div>
 
-<!-- Principal -->
 <h2 class="section-title" data-aos="fade-up">Principal</h2>
-<div class="grid">
+<div class="single-feature-block">
     <div class="card" data-aos="zoom-in">
         <img src="https://i.ibb.co/DdjY144/principal.jpg" alt="Principal Photo">
         <h3>DR MALLESH S</h3>
         <p>
             We sincerely thank our respected Principal, DR MALLESH S, for his constant support, encouragement, and guidance throughout our BCA journey. Your leadership and dedication inspired us to grow not only academically but also personally. We are grateful for all the opportunities and memories given to us during these wonderful years.
-            <br><br>
-            EAST WEST BUSINESS SCHOOL will always remain a special part of our lives. This college gave us knowledge, friendships, unforgettable memories, and countless experiences that shaped our future. From classrooms to celebrations, every moment became a beautiful chapter in our journey. We proudly carry the memories and values learned here forever.
-            <br><strong>-Abhishek ck</strong>
+            <br>
+           
         </p>
     </div>
 </div>
 
-<!-- Lecturers -->
 <h2 class="section-title" id="lecturers" data-aos="fade-up">Lecturers</h2>
 <div class="grid">
     <div class="card" data-aos="fade-up">
@@ -592,52 +601,44 @@ body::after{
         <h3>KALAIRASAN</h3>
         <p>ENGLISH Department<br>“Thank you for making classes interactive, inspiring, and full of energy. We will always remember your support and encouragement.”<br>-Sachin</p>
     </div>
-    <!-- about college -->
-<h2 class="section-title" data-aos="fade-up">About the college</h2>
-<div class="grid">
+</div>
+
+<h2 class="section-title" data-aos="fade-up">About the College</h2>
+<div class="single-feature-block">
     <div class="card" data-aos="zoom-in">
-        <img src="https://www.getmycollege.com/college/bangalore/east-west-institute-of-technology-engineering-college/gallery" alt="Principal Photo">
-        <h3>EAST WEST BUSINESS SCHOOL<h3>
-        
-            EAST WEST BUSINESS SCHOOL will always remain a special part of our lives. This college gave us knowledge, friendships, unforgettable memories, and countless experiences that shaped our future. From classrooms to celebrations, every moment became a beautiful chapter in our journey. We proudly carry the memories and values learned here forever.
-            <br><strong>vijyalakshmi</strong>
+        <img class="college-landscape" src="VV" alt="East West Business School Campus">
+        <h3>EAST WEST BUSINESS SCHOOL</h3>
+        <p>
+            East West Business School has been a foundational pillar of academic excellence, equipping students with state-of-the-art infrastructure, dynamic data labs, and an open environment for holistic growth.  We proudly carry the principles, knowledge, and values learned here forever.
+            <br><br><strong>- Vijayalakshmi & Kirana</strong>
         </p>
     </div>
 </div>
-</div>
 
-<!-- Unified Memory Gallery (Images & Videos Mixed) -->
 <h2 class="section-title" id="gallery" data-aos="fade-up">Memory Gallery</h2>
 <div class="gallery">
     
-    <!-- Image Item -->
     <div class="gallery-item" data-aos="zoom-in">
         <img src="ap2.jpeg" alt="Class Memory">
     </div>
 
-    <!-- NEW: Video Item in Gallery -->
-    <!-- Make sure to add video1.mp4 and video2.mp4 to your GitHub repo root folder -->
     <div class="gallery-item" data-aos="zoom-in">
         <div class="gallery-video-wrapper">
             <video src="video1.mp4" loop autoplay muted playsinline class="gallery-video-player"></video>
-            <!-- Overlay that shows on hover to unmute -->
             <div class="gallery-video-overlay" onclick="toggleGalleryVideoMute(this)">
                 <button class="gallery-mute-btn">🔊 Unmute</button>
             </div>
         </div>
     </div>
     
-    <!-- Image Item -->
     <div class="gallery-item" data-aos="zoom-in">
         <img src="ap1.jpeg" alt="Class Memory">
     </div>
     
-    <!-- Image Item -->
     <div class="gallery-item" data-aos="zoom-in">
         <img src="up1.jpeg" alt="Class Memory">
     </div>
 
-    <!-- NEW: Second Video Item in Gallery -->
     <div class="gallery-item" data-aos="zoom-in">
         <div class="gallery-video-wrapper">
             <video src="video2.mp4" loop autoplay muted playsinline class="gallery-video-player"></video>
@@ -647,7 +648,6 @@ body::after{
         </div>
     </div>
 
-    <!-- Remaining Original Images -->
     <div class="gallery-item" data-aos="zoom-in"><img src="up4.jpeg" alt="Memory"></div>
     <div class="gallery-item" data-aos="zoom-in"><img src="up5.jpeg" alt="Memory"></div>
     <div class="gallery-item" data-aos="zoom-in"><img src="up6.jpeg" alt="Memory"></div>
@@ -680,7 +680,6 @@ body::after{
     <div class="gallery-item" data-aos="zoom-in"><img src="up33.jpeg" alt="Memory"></div>
 </div>
 
-<!-- Footer -->
 <div class="footer">
     All Rights Reserved @ theloser0000<br><br>
     BCA 2026 Farewell Website
