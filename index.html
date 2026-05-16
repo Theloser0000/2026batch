@@ -444,12 +444,41 @@ body::after{
 <body>
 
 <!-- Music -->
-<audio id="bgmusic" loop>
-    <source src="music.mp3" type="audio/mp3">
-</audio>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
-<button class="music-btn" onclick="toggleMusic()">🎵</button>
+<script>
 
+AOS.init({
+    duration:1200,
+    once:true
+});
+
+const music = document.getElementById("bgmusic");
+
+window.onload = () => {
+
+    // autoplay muted
+    music.play();
+
+    // unmute after 1 second
+    setTimeout(() => {
+        music.muted = false;
+        music.volume = 1;
+    }, 1000);
+
+};
+
+function toggleMusic(){
+
+    if(music.paused){
+        music.play();
+    } else {
+        music.pause();
+    }
+
+}
+
+</script>
 <div class="container">
 
 <!-- Navbar -->
