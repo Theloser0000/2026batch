@@ -437,14 +437,16 @@ body::after{
     padding:30px 15px;
     position:relative;
     border-radius:30px;
-    border:2px solid rgba(77,163,255,0.7);
+    border:1.5px solid rgba(77,163,255,0.35);
     background:rgba(255,255,255,0.03);
     backdrop-filter:blur(10px);
     text-align:center;
     overflow:hidden;
+
     box-shadow:
-    0 0 12px rgba(77,163,255,0.3),
-    0 0 30px rgba(77,163,255,0.1);
+    0 0 6px rgba(77,163,255,0.15),
+    0 0 15px rgba(77,163,255,0.05);
+
     animation:devGlow 4s infinite alternate;
 }
 
@@ -452,14 +454,14 @@ body::after{
 
     from{
         box-shadow:
-        0 0 12px rgba(77,163,255,0.3),
-        0 0 30px rgba(77,163,255,0.1);
+        0 0 6px rgba(77,163,255,0.15),
+        0 0 15px rgba(77,163,255,0.05);
     }
 
     to{
         box-shadow:
-        0 0 22px rgba(0,255,255,0.5),
-        0 0 50px rgba(77,163,255,0.2);
+        0 0 10px rgba(0,255,255,0.2),
+        0 0 25px rgba(77,163,255,0.08);
     }
 
 }
@@ -476,17 +478,22 @@ body::after{
     font-size:11px;
     font-weight:700;
     letter-spacing:2px;
-    box-shadow:0 0 12px rgba(77,163,255,0.5);
+
+    box-shadow:
+    0 0 8px rgba(77,163,255,0.2);
 }
 
 /* Floating Dots */
 .dev-dot{
     position:absolute;
-    width:7px;
-    height:7px;
+    width:6px;
+    height:6px;
     border-radius:50%;
     background:#4da3ff;
-    box-shadow:0 0 12px #4da3ff;
+
+    box-shadow:
+    0 0 8px rgba(77,163,255,0.25);
+
     animation:floatDot 6s infinite ease-in-out;
 }
 
@@ -512,7 +519,7 @@ body::after{
     }
 
     50%{
-        transform:translateY(-12px);
+        transform:translateY(-10px);
     }
 
     100%{
@@ -527,14 +534,18 @@ body::after{
     height:100px;
     border-radius:50%;
     object-fit:cover;
-    border:3px solid #4da3ff;
-    box-shadow:0 0 20px rgba(77,163,255,0.7);
+
+    border:3px solid rgba(77,163,255,0.7);
+
+    box-shadow:
+    0 0 10px rgba(77,163,255,0.35);
+
     margin-bottom:18px;
     transition:0.4s;
 }
 
 .dev-profile img:hover{
-    transform:scale(1.05);
+    transform:scale(1.04);
 }
 
 /* Name */
@@ -559,14 +570,16 @@ body::after{
     line-height:1.8;
     font-weight:500;
     color:white;
+    opacity:0.9;
 }
 
 /* Icons */
 .dev-icons{
     margin-top:20px;
-    font-size:22px;
+    font-size:20px;
     color:white;
     letter-spacing:8px;
+    opacity:0.8;
 }
 
 /* Mobile */
@@ -581,11 +594,11 @@ body::after{
         height:85px;
     }
 
-    .dev-profile h4{
+    .dev-profile h2{
         font-size:24px;
     }
 
-    .dev-profile h5{
+    .dev-profile h3{
         font-size:16px;
     }
 
