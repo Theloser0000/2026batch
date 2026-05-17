@@ -12,6 +12,37 @@ l<!DOCTYPE html>
 <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
 
 <style>
+ /* Welcome Popup */
+.popup-overlay {
+    position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(0, 0, 0, 0.85); backdrop-filter: blur(10px);
+    display: flex; justify-content: center; align-items: center;
+    z-index: 10000; transition: 0.5s;
+}
+.popup-card {
+    background: rgba(255, 255, 255, 0.1); border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 40px; border-radius: 30px; text-align: center; max-width: 400px;
+}
+.popup-btn {
+    margin-top: 20px; padding: 12px 30px; border: none; border-radius: 25px;
+    background: #4da3ff; color: white; cursor: pointer; font-weight: 600;
+}
+
+/* 3D Developer Card */
+.dev-container { perspective: 1000px; margin: 50px auto; width: 320px; height: 400px; }
+.dev-card {
+    width: 100%; height: 100%; position: relative;
+    transform-style: preserve-3d; transition: transform 0.8s; cursor: pointer;
+}
+.dev-container:hover .dev-card { transform: rotateY(180deg); }
+.dev-front, .dev-back {
+    position: absolute; width: 100%; height: 100%;
+    backface-visibility: hidden; border-radius: 30px;
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    background: rgba(255, 255, 255, 0.08); border: 1px solid rgba(255, 255, 255, 0.1);
+}
+.dev-back { transform: rotateY(180deg); background: rgba(77, 163, 255, 0.15); }
+.dev-img { width: 150px; height: 150px; border-radius: 50%; border: 3px solid #4da3ff; margin-bottom: 15px; }
 *{
     margin:0;
     padding:0;
@@ -302,6 +333,66 @@ body::after{
     color:#4da3ff;
     margin-bottom:10px;
 }
+ /* Developer Section Styling */
+.dev-container {
+    perspective: 1000px;
+    margin: 60px auto;
+    width: 320px;
+    height: 420px;
+}
+
+.dev-card {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    cursor: pointer;
+}
+
+/* The Flip Trigger */
+.dev-container:hover .dev-card {
+    transform: rotateY(180deg);
+}
+
+.dev-front, .dev-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(15px);
+}
+
+.dev-front {
+    background: rgba(255, 255, 255, 0.07);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+}
+
+.dev-back {
+    background: linear-gradient(135deg, rgba(77, 163, 255, 0.2), rgba(0, 212, 255, 0.1));
+    transform: rotateY(180deg);
+    padding: 20px;
+    text-align: center;
+}
+
+.dev-avatar {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    border: 4px solid #4da3ff;
+    margin-bottom: 20px;
+    object-fit: cover;
+    box-shadow: 0 0 20px rgba(77, 163, 255, 0.4);
+}
+
+.dev-back h3 { color: #4da3ff; margin-bottom: 10px; }
+.dev-back p { font-size: 14px; opacity: 0.9; line-height: 1.6; }
 
 /* Unified Memory Gallery */
 .gallery{
@@ -468,6 +559,13 @@ body::after{
 </style>
 </head>
 <body>
+ <div class="popup-overlay" id="welcomePopup">
+    <div class="popup-card">
+        <h2>Welcome to Our Journey</h2>
+        <p>Experience the memories of BCA 2026 Batch with music.</p>
+        <button class="popup-btn" onclick="closePopup()">Enter Website</button>
+    </div>
+</div>
 
 <audio id="bgmusic" loop autoplay>
     <source src="music.mp3" type="audio/mp3">
@@ -613,6 +711,32 @@ body::after{
             East West Business School has been a foundational pillar of academic excellence, equipping students with state-of-the-art infrastructure, dynamic data labs, and an open environment for holistic growth.  We proudly carry the principles, knowledge, and values learned here forever.
             <br><br><strong>- Vijayalakshmi V & Kirana</strong>
         </p>
+    </div>
+</div>
+ <h2 class="section-title" data-aos="fade-up">About Developer</h2>
+
+<div class="dev-container" data-aos="zoom-in">
+    <div class="dev-card">
+        
+        <!-- Front Side -->
+        <div class="dev-front">
+            <img src="https://i.ibb.co/N5VLzZn/IMG-20260515-184039.jpg" class="dev-avatar" alt="Developer">
+            <h3 style="letter-spacing: 1px;">Abhishek CK</h3>
+            <p style="color: #4da3ff; font-weight: 500;">@theloser0000</p>
+            <div style="margin-top: 15px; font-size: 12px; opacity: 0.6;">(Hover to Flip)</div>
+        </div>
+
+        <!-- Back Side (The "Flip" content) -->
+        <div class="dev-back">
+            <h3>Creative Mind</h3>
+            <p>
+                "Building this site was a journey through our best moments. 
+                I hope this gallery keeps our BCA family memories alive forever."
+            </p>
+            <div style="margin-top: 20px; font-size: 24px;">👨‍💻 🎓 💫</div>
+            <p style="margin-top: 10px; font-weight: 600; color: #4da3ff;">BCA Batch of 2026</p>
+        </div>
+
     </div>
 </div>
 
