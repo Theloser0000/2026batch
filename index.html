@@ -426,7 +426,157 @@ body::after{
 .footer span{
     color:#4da3ff;
 }
+/* ================= DEVELOPER SECTION ================= */
 
+.developer-box{
+    width:100%;
+    max-width:1200px;
+    margin:80px auto;
+    padding:70px 30px;
+    position:relative;
+    border-radius:40px;
+    border:3px solid rgba(77,163,255,0.7);
+    background:rgba(255,255,255,0.03);
+    backdrop-filter:blur(10px);
+    text-align:center;
+    overflow:hidden;
+    box-shadow:
+    0 0 20px rgba(77,163,255,0.4),
+    0 0 60px rgba(77,163,255,0.15);
+    animation:devGlow 4s infinite alternate;
+}
+
+@keyframes devGlow{
+    from{
+        box-shadow:
+        0 0 20px rgba(77,163,255,0.4),
+        0 0 60px rgba(77,163,255,0.15);
+    }
+
+    to{
+        box-shadow:
+        0 0 35px rgba(0,255,255,0.7),
+        0 0 90px rgba(77,163,255,0.35);
+    }
+}
+
+/* Ribbon */
+.dev-ribbon{
+    position:absolute;
+    top:25px;
+    right:-45px;
+    background:#4da3ff;
+    color:#00111f;
+    padding:12px 60px;
+    transform:rotate(45deg);
+    font-size:15px;
+    font-weight:700;
+    letter-spacing:2px;
+    box-shadow:0 0 20px rgba(77,163,255,0.5);
+}
+
+/* Floating dots */
+.dev-dot{
+    position:absolute;
+    width:10px;
+    height:10px;
+    border-radius:50%;
+    background:#4da3ff;
+    box-shadow:0 0 20px #4da3ff;
+    animation:floatDot 6s infinite ease-in-out;
+}
+
+.dev-dot:nth-child(1){
+    top:90px;
+    left:120px;
+}
+
+.dev-dot:nth-child(2){
+    bottom:120px;
+    right:140px;
+}
+
+.dev-dot:nth-child(3){
+    bottom:70px;
+    left:100px;
+}
+
+@keyframes floatDot{
+    0%{transform:translateY(0px);}
+    50%{transform:translateY(-20px);}
+    100%{transform:translateY(0px);}
+}
+
+/* Profile */
+.dev-profile img{
+    width:190px;
+    height:190px;
+    border-radius:50%;
+    object-fit:cover;
+    border:5px solid #4da3ff;
+    box-shadow:0 0 30px rgba(77,163,255,0.8);
+    margin-bottom:25px;
+    transition:0.4s;
+}
+
+.dev-profile img:hover{
+    transform:scale(1.05);
+}
+
+.dev-profile h2{
+    font-size:52px;
+    margin-bottom:10px;
+    color:white;
+}
+
+.dev-profile h3{
+    color:#4da3ff;
+    font-size:36px;
+    margin-bottom:30px;
+}
+
+.dev-profile p{
+    max-width:900px;
+    margin:auto;
+    font-size:22px;
+    line-height:1.8;
+    font-weight:500;
+    color:white;
+}
+
+/* Icons */
+.dev-icons{
+    margin-top:35px;
+    font-size:38px;
+    color:white;
+    letter-spacing:15px;
+}
+
+/* Mobile */
+@media(max-width:700px){
+
+    .developer-box{
+        padding:50px 20px;
+    }
+
+    .dev-profile img{
+        width:140px;
+        height:140px;
+    }
+
+    .dev-profile h2{
+        font-size:38px;
+    }
+
+    .dev-profile h3{
+        font-size:26px;
+    }
+
+    .dev-profile p{
+        font-size:18px;
+    }
+
+}
 /* Responsive Media Queries */
 @media(max-width:900px){
     .gallery{
@@ -614,6 +764,39 @@ body::after{
             <br><br><strong>- Vijayalakshmi V & Kirana</strong>
         </p>
     </div>
+</div>
+ <!-- ================= DEVELOPER SECTION ================= -->
+
+<div class="developer-box" data-aos="zoom-in">
+
+    <div class="dev-ribbon">
+        DEVELOPER
+    </div>
+
+    <div class="dev-dot"></div>
+    <div class="dev-dot"></div>
+    <div class="dev-dot"></div>
+
+    <div class="dev-profile">
+
+        <img src="abhi.jpeg" alt="Developer">
+
+        <h2>Abhishek CK</h2>
+
+        <h3>(theloser0000)</h3>
+
+        <p>
+            "I designed this site as a gift to our batch.
+            Coding this was like walking down memory lane.
+            Cheers to the BCA Class of 2026!"
+        </p>
+
+        <div class="dev-icons">
+            ⌘ ⌐ ⌗
+        </div>
+
+    </div>
+
 </div>
 
 <h2 class="section-title" id="gallery" data-aos="fade-up">Memory Gallery</h2>
