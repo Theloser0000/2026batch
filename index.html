@@ -428,94 +428,108 @@ body::after{
 }
 /* ================= DEVELOPER SECTION ================= */
 
+/* ================= COMPACT DEVELOPER SECTION ================= */
+
 .developer-box{
     width:100%;
-    max-width:850px;
-    margin:60px auto;
-    padding:45px 20px;
+    max-width:700px;
+    margin:50px auto;
+    padding:30px 15px;
     position:relative;
-    border-radius:35px;
+    border-radius:30px;
     border:2px solid rgba(77,163,255,0.7);
     background:rgba(255,255,255,0.03);
     backdrop-filter:blur(10px);
     text-align:center;
     overflow:hidden;
     box-shadow:
-    0 0 15px rgba(77,163,255,0.35),
-    0 0 40px rgba(77,163,255,0.12);
+    0 0 12px rgba(77,163,255,0.3),
+    0 0 30px rgba(77,163,255,0.1);
     animation:devGlow 4s infinite alternate;
 }
 
 @keyframes devGlow{
+
     from{
         box-shadow:
-        0 0 15px rgba(77,163,255,0.35),
-        0 0 40px rgba(77,163,255,0.12);
+        0 0 12px rgba(77,163,255,0.3),
+        0 0 30px rgba(77,163,255,0.1);
     }
 
     to{
         box-shadow:
-        0 0 25px rgba(0,255,255,0.5),
-        0 0 60px rgba(77,163,255,0.25);
+        0 0 22px rgba(0,255,255,0.5),
+        0 0 50px rgba(77,163,255,0.2);
     }
+
 }
 
 /* Ribbon */
 .dev-ribbon{
     position:absolute;
-    top:18px;
+    top:14px;
     right:-42px;
     background:#4da3ff;
     color:#00111f;
-    padding:10px 50px;
+    padding:8px 45px;
     transform:rotate(45deg);
-    font-size:12px;
+    font-size:11px;
     font-weight:700;
     letter-spacing:2px;
-    box-shadow:0 0 15px rgba(77,163,255,0.5);
+    box-shadow:0 0 12px rgba(77,163,255,0.5);
 }
 
-/* Floating dots */
+/* Floating Dots */
 .dev-dot{
     position:absolute;
-    width:8px;
-    height:8px;
+    width:7px;
+    height:7px;
     border-radius:50%;
     background:#4da3ff;
-    box-shadow:0 0 15px #4da3ff;
+    box-shadow:0 0 12px #4da3ff;
     animation:floatDot 6s infinite ease-in-out;
 }
 
 .dev-dot:nth-child(1){
-    top:80px;
-    left:90px;
+    top:70px;
+    left:70px;
 }
 
 .dev-dot:nth-child(2){
-    bottom:100px;
-    right:100px;
+    bottom:80px;
+    right:80px;
 }
 
 .dev-dot:nth-child(3){
-    bottom:60px;
-    left:80px;
+    bottom:50px;
+    left:70px;
 }
 
 @keyframes floatDot{
-    0%{transform:translateY(0px);}
-    50%{transform:translateY(-15px);}
-    100%{transform:translateY(0px);}
+
+    0%{
+        transform:translateY(0px);
+    }
+
+    50%{
+        transform:translateY(-12px);
+    }
+
+    100%{
+        transform:translateY(0px);
+    }
+
 }
 
-/* Profile */
+/* Profile Image */
 .dev-profile img{
-    width:135px;
-    height:135px;
+    width:100px;
+    height:100px;
     border-radius:50%;
     object-fit:cover;
-    border:4px solid #4da3ff;
-    box-shadow:0 0 25px rgba(77,163,255,0.7);
-    margin-bottom:20px;
+    border:3px solid #4da3ff;
+    box-shadow:0 0 20px rgba(77,163,255,0.7);
+    margin-bottom:18px;
     transition:0.4s;
 }
 
@@ -523,22 +537,25 @@ body::after{
     transform:scale(1.05);
 }
 
+/* Name */
 .dev-profile h2{
-    font-size:36px;
-    margin-bottom:8px;
+    font-size:28px;
+    margin-bottom:6px;
     color:white;
 }
 
+/* Username */
 .dev-profile h3{
     color:#4da3ff;
-    font-size:24px;
-    margin-bottom:20px;
+    font-size:18px;
+    margin-bottom:18px;
 }
 
+/* Description */
 .dev-profile p{
-    max-width:700px;
+    max-width:550px;
     margin:auto;
-    font-size:17px;
+    font-size:14px;
     line-height:1.8;
     font-weight:500;
     color:white;
@@ -546,34 +563,34 @@ body::after{
 
 /* Icons */
 .dev-icons{
-    margin-top:25px;
-    font-size:26px;
+    margin-top:20px;
+    font-size:22px;
     color:white;
-    letter-spacing:10px;
+    letter-spacing:8px;
 }
 
 /* Mobile */
 @media(max-width:700px){
 
     .developer-box{
-        padding:35px 15px;
+        padding:25px 12px;
     }
 
     .dev-profile img{
-        width:110px;
-        height:110px;
+        width:85px;
+        height:85px;
     }
 
-    .dev-profile h2{
-        font-size:28px;
+    .dev-profile h4{
+        font-size:24px;
     }
 
-    .dev-profile h3{
-        font-size:20px;
+    .dev-profile h5{
+        font-size:16px;
     }
 
     .dev-profile p{
-        font-size:15px;
+        font-size:13px;
     }
 
 }
