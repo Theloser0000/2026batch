@@ -645,9 +645,200 @@ body::after{
         font-size:22px;
     }
 }
+ /* ================= WELCOME POPUP ================= */
+
+.welcome-popup{
+
+    position:fixed;
+    inset:0;
+
+    background:rgba(0,0,0,0.8);
+
+    backdrop-filter:blur(12px);
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    z-index:999999;
+
+    overflow:hidden;
+}
+
+.welcome-box{
+
+    width:90%;
+    max-width:650px;
+
+    padding:55px 35px;
+
+    text-align:center;
+
+    border-radius:35px;
+
+    background:rgba(255,255,255,0.05);
+
+    border:1px solid rgba(255,255,255,0.15);
+
+    box-shadow:
+    0 0 25px rgba(77,163,255,0.25),
+    0 0 70px rgba(77,163,255,0.15);
+
+    animation:popupAnim 1s ease;
+}
+
+.welcome-box h1{
+
+    font-size:52px;
+
+    margin-bottom:20px;
+
+    background:linear-gradient(to right,#4da3ff,#ffffff);
+
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+}
+
+.welcome-box p{
+
+    font-size:18px;
+
+    line-height:1.9;
+
+    opacity:0.9;
+}
+
+.welcome-box button{
+
+    margin-top:30px;
+
+    padding:14px 38px;
+
+    border:none;
+
+    border-radius:50px;
+
+    background:linear-gradient(135deg,#4da3ff,#00d4ff);
+
+    color:white;
+
+    font-size:16px;
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:0.3s;
+}
+
+.welcome-box button:hover{
+
+    transform:scale(1.08);
+
+    box-shadow:
+    0 0 30px rgba(77,163,255,0.5);
+}
+
+@keyframes popupAnim{
+
+    from{
+        transform:scale(0.6);
+        opacity:0;
+    }
+
+    to{
+        transform:scale(1);
+        opacity:1;
+    }
+
+}
+
+/* Blast Animation */
+
+.blast{
+
+    position:absolute;
+
+    width:15px;
+    height:15px;
+
+    border-radius:50%;
+
+    background:#4da3ff;
+
+    box-shadow:0 0 20px #4da3ff;
+
+    animation:blastAnim 2s infinite;
+}
+
+.blast1{
+    top:20%;
+    left:20%;
+}
+
+.blast2{
+    top:30%;
+    right:20%;
+    animation-delay:0.7s;
+}
+
+.blast3{
+    bottom:20%;
+    left:50%;
+    animation-delay:1.3s;
+}
+
+@keyframes blastAnim{
+
+    0%{
+        transform:scale(0);
+        opacity:1;
+    }
+
+    100%{
+        transform:scale(14);
+        opacity:0;
+    }
+
+}
+
+/* Mobile */
+
+@media(max-width:600px){
+
+    .welcome-box h1{
+        font-size:34px;
+    }
+
+    .welcome-box p{
+        font-size:15px;
+    }
+
+}
 </style>
 </head>
 <body>
+ <!-- Welcome Popup -->
+<div class="welcome-popup" id="welcomePopup">
+
+    <div class="blast blast1"></div>
+    <div class="blast blast2"></div>
+    <div class="blast blast3"></div>
+
+    <div class="welcome-box">
+
+        <h1>🎓 Welcome BCA 2026 🎉</h1>
+
+        <p>
+            Relive the unforgettable memories, friendship and beautiful moments of EWBS BCA Batch 2026.
+        </p>
+
+        <button onclick="closeWelcome()">
+            Enter Website
+        </button>
+
+    </div>
+
+</div>
 
 <audio id="bgmusic" loop autoplay>
     <source src="music.mp3" type="audio/mp3">
@@ -970,6 +1161,13 @@ function toggleGalleryVideoMute(overlayElement) {
         // Restore background music volume
         bgMusic.volume = 0.5;
     }
+}
+ /* Close Welcome Popup */
+
+function closeWelcome(){
+
+    document.getElementById("welcomePopup").style.display="none";
+
 }
 </script>
 </body>
