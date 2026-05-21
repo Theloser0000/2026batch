@@ -907,8 +907,6 @@ body::after{
     color:#ff4d6d;
     margin-top:10px;
 }
-
-
 </style>
 </head>
 <body>
@@ -1136,7 +1134,7 @@ Crafted with creativity, passion, and countless late-night coding sessions to pr
     </div>
 
 </div>
-
+/* updating
 <h2 class="section-title" id="gallery" data-aos="fade-up">
     Memory Gallery
 </h2>
@@ -1304,6 +1302,41 @@ window.addEventListener("load", () => {
         });
     }
 });
+
+function toggleMusic(){
+    const music = document.getElementById("bgmusic");
+    if(music.paused){
+        music.play();
+    } else {
+        music.pause();
+    }
+}
+
+// Function specifically for handling videos embedded in the unified gallery
+function toggleGalleryVideoMute(overlayElement) {
+    const video = overlayElement.previousElementSibling; // Selects the video tag directly before the overlay div
+    const button = overlayElement.querySelector('.gallery-mute-btn');
+    const bgMusic = document.getElementById("bgmusic");
+    
+    if (video.muted) {
+        // Video is muted, so unmute it
+        video.muted = false;
+        button.innerHTML = "🔇 Mute Video";
+        button.style.background = "#e11d48"; // Change button to Red to indicate click will mute
+        
+        // Temporarily mute main tab background music so video can be heard
+        bgMusic.volume = 0; 
+    } else {
+        // Video is unmuted, so mute it back
+        video.muted = true;
+        button.innerHTML = "🔊 Unmute";
+        button.style.background = "rgba(77,163,255,0.9)"; // Restore theme blue
+        
+        // Restore background music volume
+        bgMusic.volume = 0.5;
+    }
+}
+ /* Close Welcome Popup */
 
 function closeWelcome(){
 
