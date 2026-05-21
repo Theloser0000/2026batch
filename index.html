@@ -1427,77 +1427,31 @@ window.addEventListener("load", () => {
     }
 });
 
-function toggleMusic(){
-    const music = document.getElementById("bgmusic");
-    if(music.paused){
-        music.play();
-    } else {
-        music.pause();
-    }
-}
-
-// Function specifically for handling videos embedded in the unified gallery
-function toggleGalleryVideoMute(overlayElement) {
-    const video = overlayElement.previousElementSibling; // Selects the video tag directly before the overlay div
-    const button = overlayElement.querySelector('.gallery-mute-btn');
-    const bgMusic = document.getElementById("bgmusic");
-    
-    if (video.muted) {
-        // Video is muted, so unmute it
-        video.muted = false;
-        button.innerHTML = "🔇 Mute Video";
-        button.style.background = "#e11d48"; // Change button to Red to indicate click will mute
-        
-        // Temporarily mute main tab background music so video can be heard
-        bgMusic.volume = 0; 
-    } else {
-        // Video is unmuted, so mute it back
-        video.muted = true;
-        button.innerHTML = "🔊 Unmute";
-        button.style.background = "rgba(77,163,255,0.9)"; // Restore theme blue
-        
-        // Restore background music volume
-        bgMusic.volume = 0.5;
-    }
-}
- /* Close Welcome Popup */
-
 function closeWelcome(){
+    const popup = document.getElementById("welcomePopup");
 
-    const popup =
-        document.getElementById("welcomePopup");
+    popup.style.transition = "all 0.8s ease";
+    popup.style.opacity = "0";
+    popup.style.transform = "scale(1.2)";
+    popup.style.filter = "blur(20px)";
 
-    popup.classList.add("welcome-hide");
+    setTimeout(() => {
+        popup.style.display = "none";
+    }, 800);
 
-    // Blast particles
+    // particles
     for(let i = 0; i < 40; i++){
-
-        const particle =
-            document.createElement("div");
-
+        const particle = document.createElement("div");
         particle.className = "entry-particle";
 
-        particle.style.left =
-            Math.random() * window.innerWidth + "px";
-
-        particle.style.top =
-            Math.random() * window.innerHeight + "px";
-
-        particle.style.background =
-            `hsl(${Math.random()*360},100%,70%)`;
+        particle.style.left = Math.random() * window.innerWidth + "px";
+        particle.style.top = Math.random() * window.innerHeight + "px";
+        particle.style.background = `hsl(${Math.random()*360},100%,70%)`;
 
         document.body.appendChild(particle);
 
-        setTimeout(() => {
-            particle.remove();
-        }, 2500);
+        setTimeout(() => particle.remove(), 2500);
     }
-
-    setTimeout(() => {
-
-        popup.style.display = "none";
-
-    }, 1200);
 }
  /* =========================
    GALLERY LOCK SYSTEM
