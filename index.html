@@ -1428,30 +1428,9 @@ window.addEventListener("load", () => {
 });
 
 function closeWelcome(){
-    const popup = document.getElementById("welcomePopup");
 
-    popup.style.transition = "all 0.8s ease";
-    popup.style.opacity = "0";
-    popup.style.transform = "scale(1.2)";
-    popup.style.filter = "blur(20px)";
+    document.getElementById("welcomePopup").style.display="none";
 
-    setTimeout(() => {
-        popup.style.display = "none";
-    }, 800);
-
-    // particles
-    for(let i = 0; i < 40; i++){
-        const particle = document.createElement("div");
-        particle.className = "entry-particle";
-
-        particle.style.left = Math.random() * window.innerWidth + "px";
-        particle.style.top = Math.random() * window.innerHeight + "px";
-        particle.style.background = `hsl(${Math.random()*360},100%,70%)`;
-
-        document.body.appendChild(particle);
-
-        setTimeout(() => particle.remove(), 2500);
-    }
 }
  /* =========================
    GALLERY LOCK SYSTEM
