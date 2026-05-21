@@ -814,6 +814,99 @@ body::after{
     }
 
 }
+ /* =========================
+   GALLERY LOCK SYSTEM
+========================= */
+
+.lock-screen{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    margin:50px auto;
+}
+
+.lock-box{
+
+    width:90%;
+    max-width:400px;
+
+    padding:40px;
+
+    border-radius:25px;
+
+    background:rgba(255,255,255,0.05);
+
+    border:1px solid rgba(255,255,255,0.1);
+
+    text-align:center;
+
+    backdrop-filter:blur(12px);
+
+    box-shadow:0 0 30px rgba(77,163,255,0.15);
+}
+
+.lock-box h2{
+    color:#4da3ff;
+    margin-bottom:15px;
+}
+
+.lock-box p{
+    opacity:0.8;
+    margin-bottom:20px;
+}
+
+.lock-box input{
+
+    width:100%;
+
+    padding:14px;
+
+    border:none;
+
+    outline:none;
+
+    border-radius:12px;
+
+    margin-bottom:18px;
+
+    background:rgba(255,255,255,0.08);
+
+    color:white;
+
+    font-size:15px;
+}
+
+.lock-box button{
+
+    width:100%;
+
+    padding:14px;
+
+    border:none;
+
+    border-radius:12px;
+
+    background:linear-gradient(135deg,#4da3ff,#00d4ff);
+
+    color:white;
+
+    font-size:15px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:0.3s;
+}
+
+.lock-box button:hover{
+    transform:scale(1.03);
+}
+
+#errorText{
+    color:#ff4d6d;
+    margin-top:10px;
+}
 </style>
 </head>
 <body>
@@ -1041,10 +1134,38 @@ Crafted with creativity, passion, and countless late-night coding sessions to pr
     </div>
 
 </div>
+/* updating
+<h2 class="section-title" id="gallery" data-aos="fade-up">
+    Memory Gallery
+</h2>
 
-<h2 class="section-title" id="gallery" data-aos="fade-up">Memory Gallery</h2>
-<div class="gallery">
-    
+<!-- LOCK SCREEN -->
+<div id="galleryLockScreen" class="lock-screen">
+
+    <div class="lock-box">
+
+        <h2>🔒 Private Gallery</h2>
+
+        <p>Enter access code to view gallery</p>
+
+        <input 
+            type="password" 
+            id="galleryCode" 
+            placeholder="Enter Access Code"
+        >
+
+        <button onclick="unlockGallery()">
+            Unlock Gallery
+        </button>
+
+        <p id="errorText"></p>
+
+    </div>
+
+</div>
+
+<!-- MAIN GALLERY -->
+<div class="gallery" id="mainGallery" style="display:none;">
     <div class="gallery-item" data-aos="zoom-in">
         <img src="ap2.jpeg" alt="Class Memory">
     </div>
@@ -1220,6 +1341,58 @@ function toggleGalleryVideoMute(overlayElement) {
 function closeWelcome(){
 
     document.getElementById("welcomePopup").style.display="none";
+
+}
+ /* =========================
+   GALLERY LOCK SYSTEM
+========================= */
+
+// CHANGE true or false
+const galleryLocked = true;
+
+// PASSWORD
+const secretCode = "bca2026";
+
+window.addEventListener("load", () => {
+
+    const gallery = document.getElementById("mainGallery");
+    const lockScreen = document.getElementById("galleryLockScreen");
+
+    // IF ADMIN UNLOCKED
+    if(!galleryLocked){
+
+        gallery.style.display = "block";
+
+        lockScreen.style.display = "none";
+    }
+
+});
+
+function unlockGallery(){
+
+    const enteredCode =
+        document.getElementById("galleryCode").value;
+
+    const gallery =
+        document.getElementById("mainGallery");
+
+    const errorText =
+        document.getElementById("errorText");
+
+    if(enteredCode === secretCode){
+
+        gallery.style.display = "block";
+
+        document.getElementById(
+            "galleryLockScreen"
+        ).style.display = "none";
+
+    } else {
+
+        errorText.innerHTML =
+            "❌ Wrong Access Code";
+
+    }
 
 }
 </script>
