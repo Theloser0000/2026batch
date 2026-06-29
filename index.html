@@ -430,183 +430,127 @@ body::after{
 
 /* ================= COMPACT DEVELOPER SECTION ================= */
 
-.developer-box{
-    width:100%;
-    max-width:500px;
-    margin:50px auto;
-    padding:30px 15px;
-    position:relative;
-    border-radius:30px;
-    border:1.5px solid rgba(77,163,255,0.35);
-    background:rgba(255,255,255,0.03);
-    backdrop-filter:blur(10px);
-    text-align:center;
-    overflow:hidden;
+.developer-box {
+    width: 100%;
+    max-width: 480px;
+    margin: 60px auto;
+    padding: 35px 20px;
+    position: relative;
+    border-radius: 20px;
+    background: #0d0d0d;
+    text-align: center;
+    overflow: hidden;
 
-    box-shadow:
-    0 0 6px rgba(77,163,255,0.15),
-    0 0 15px rgba(77,163,255,0.05);
+    border: 2px solid transparent;
+    background-image: linear-gradient(#0d0d0d, #0d0d0d),
+                      linear-gradient(135deg, #ff00cc, #00ffff);
+    background-origin: border-box;
+    background-clip: content-box, border-box;
 
-    animation:devGlow 4s infinite alternate;
+    box-shadow: 0 0 25px rgba(0, 255, 255, 0.15);
+    transition: 0.4s ease;
 }
 
-@keyframes devGlow{
-
-    from{
-        box-shadow:
-        0 0 6px rgba(77,163,255,0.15),
-        0 0 15px rgba(77,163,255,0.05);
-    }
-
-    to{
-        box-shadow:
-        0 0 10px rgba(0,255,255,0.2),
-        0 0 25px rgba(77,163,255,0.08);
-    }
-
+.developer-box:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 0 40px rgba(255, 0, 200, 0.25);
 }
 
 /* Ribbon */
-.dev-ribbon{
-    position:absolute;
-    top:14px;
-    right:-42px;
-    background:#4da3ff;
-    color:#00111f;
-    padding:8px 45px;
-    transform:rotate(45deg);
-    font-size:11px;
-    font-weight:700;
-    letter-spacing:2px;
-
-    box-shadow:
-    0 0 8px rgba(77,163,255,0.2);
-}
-
-/* Floating Dots */
-.dev-dot{
-    position:absolute;
-    width:6px;
-    height:6px;
-    border-radius:50%;
-    background:#4da3ff;
-
-    box-shadow:
-    0 0 8px rgba(77,163,255,0.25);
-
-    animation:floatDot 6s infinite ease-in-out;
-}
-
-.dev-dot:nth-child(1){
-    top:70px;
-    left:70px;
-}
-
-.dev-dot:nth-child(2){
-    bottom:80px;
-    right:80px;
-}
-
-.dev-dot:nth-child(3){
-    bottom:50px;
-    left:70px;
-}
-
-@keyframes floatDot{
-
-    0%{
-        transform:translateY(0px);
-    }
-
-    50%{
-        transform:translateY(-10px);
-    }
-
-    100%{
-        transform:translateY(0px);
-    }
-
+.dev-ribbon {
+    position: absolute;
+    top: 12px;
+    left: -40px;
+    background: linear-gradient(90deg, #ff00cc, #00ffff);
+    color: #fff;
+    padding: 8px 50px;
+    transform: rotate(-45deg);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    box-shadow: 0 0 12px rgba(0, 255, 255, 0.3);
 }
 
 /* Profile Image */
-.dev-profile img{
-    width:100px;
-    height:100px;
-    border-radius:50%;
-    object-fit:cover;
-
-    border:3px solid rgba(77,163,255,0.7);
-
-    box-shadow:
-    0 0 10px rgba(77,163,255,0.35);
-
-    margin-bottom:18px;
-    transition:0.4s;
+.dev-profile img {
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #00ffff;
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.4);
+    margin-bottom: 20px;
+    transition: 0.4s;
 }
 
-.dev-profile img:hover{
-    transform:scale(1.04);
+.dev-profile img:hover {
+    transform: rotate(5deg) scale(1.08);
 }
 
 /* Name */
-.dev-profile h4{
-    font-size:28px;
-    margin-bottom:6px;
-    color:white;
+.dev-profile h4 {
+    font-size: 26px;
+    margin-bottom: 8px;
+    color: #00ffff;
 }
 
 /* Username */
-.dev-profile h5{
-    color:#4da3ff;
-    font-size:18px;
-    margin-bottom:18px;
+.dev-profile h5 {
+    color: #ff00cc;
+    font-size: 18px;
+    margin-bottom: 20px;
 }
 
 /* Description */
-.dev-profile p{
-    max-width:550px;
-    margin:auto;
-    font-size:14px;
-    line-height:1.8;
-    font-weight:500;
-    color:white;
-    opacity:0.9;
+.dev-profile p {
+    max-width: 520px;
+    margin: auto;
+    font-size: 15px;
+    line-height: 1.7;
+    font-weight: 400;
+    color: #e0e0e0;
+    opacity: 0.85;
 }
 
 /* Icons */
-.dev-icons{
-    margin-top:20px;
-    font-size:20px;
-    color:white;
-    letter-spacing:8px;
-    opacity:0.8;
+.dev-icons {
+    margin-top: 22px;
+    font-size: 22px;
+    color: #fff;
+    letter-spacing: 10px;
+    opacity: 0.9;
+    transition: 0.3s;
+}
+
+.dev-icons i:hover {
+    color: #00ffff;
+    transform: scale(1.2);
 }
 
 /* Mobile */
-@media(max-width:700px){
-
-    .developer-box{
-        padding:25px 12px;
+@media(max-width:700px) {
+    .developer-box {
+        padding: 25px 15px;
     }
 
-    .dev-profile img{
-        width:85px;
-        height:85px;
+    .dev-profile img {
+        width: 90px;
+        height: 90px;
     }
 
-    .dev-profile h2{
-        font-size:24px;
+    .dev-profile h4 {
+        font-size: 22px;
     }
 
-    .dev-profile h3{
-        font-size:16px;
+    .dev-profile h5 {
+        font-size: 15px;
     }
 
-    .dev-profile p{
-        font-size:13px;
+    .dev-profile p {
+        font-size: 13px;
     }
-
 }
+
 /* Responsive Media Queries */
 @media(max-width:900px){
     .gallery{
@@ -1101,41 +1045,9 @@ body::after{
         </p>
     </div>
 </div>
- <!-- ================= DEVELOPER SECTION ================= -->
 
-<div class="developer-box" data-aos="zoom-in">
 
-    <div class="dev-ribbon">
-        DEVELOPER
-    </div>
 
-    <div class="dev-dot"></div>
-    <div class="dev-dot"></div>
-    <div class="dev-dot"></div>
-
-    <div class="dev-profile">
-
-        <img src="xxx.jpeg" alt="Developer">
-
-        <h4>Abhishek CK</h4>
-             
-        <h5>Site Developer </h5>
-
-        <p>
-            "I designed this site as a gift to our batch.<p>
-Crafted with creativity, passion, and countless late-night coding sessions to preserve our unforgettable BCA 2026 memories forever.
-</p>
-     
-            Cheers to the BCA Class of 2026!"
-        </p>
-
-        <div class="dev-icons">
-           
-        </div>
-
-    </div>
-
-</div>
  <div style="text-align:center; margin-top:40px;">
 
     <a href="https://chat2026ewbs.lovable.app/" target="_blank"
@@ -1218,7 +1130,7 @@ Crafted with creativity, passion, and countless late-night coding sessions to pr
 <!-- MAIN GALLERY -->
 <div class="gallery" id="mainGallery" style="display:none;">
     <div class="gallery-item" data-aos="zoom-in">
-        <img src="ap2.jpeg" alt="Class Memory">
+        <img src="up20.jpeg" alt="Class Memory">
     </div>
 
     <div class="gallery-item" data-aos="zoom-in">
@@ -1276,7 +1188,7 @@ Crafted with creativity, passion, and countless late-night coding sessions to pr
     <div class="gallery-item" data-aos="zoom-in"><img src="up17.jpeg" alt="Memory"></div>
     <div class="gallery-item" data-aos="zoom-in"><img src="up18.jpeg" alt="Memory"></div>
     <div class="gallery-item" data-aos="zoom-in"><img src="up19.jpeg" alt="Memory"></div>
-    <div class="gallery-item" data-aos="zoom-in"><img src="up20.jpeg" alt="Memory"></div>
+    
     <div class="gallery-item" data-aos="zoom-in"><img src="up21.jpeg" alt="Memory"></div>
     <div class="gallery-item" data-aos="zoom-in"><img src="up22.jpeg" alt="Memory"></div>
     <div class="gallery-item" data-aos="zoom-in"><img src="up23.jpeg" alt="Memory"></div>
@@ -1347,7 +1259,7 @@ Crafted with creativity, passion, and countless late-night coding sessions to pr
     All Rights Reserved @ theloser0000<br><br>
     BCA 2026 Farewell Website
 </div>
-
+ <!-- ================= DEVELOPER SECTION ================= -->
 </div>
  <div class="developer-box" data-aos="zoom-in">
 
