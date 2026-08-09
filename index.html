@@ -427,119 +427,109 @@ body::after{
     color:#4da3ff;
 }
 /* ================= DEVELOPER SECTION ================= */
+/* ================= FLOATING / UNBORDERED DEVELOPER SECTION ================= */
 
-/* ================= COMPACT DEVELOPER SECTION ================= */
-
-/* Ribbon */
 .developer-box {
-    width: 90%;
-    max-width: 280px;
-    margin: 30px auto;
-    padding: 15px 10px;
-    position: relative;
-    border-radius: 12px;
-    background: 135deg;
+    width: 100%;
+    max-width: 500px;
+    margin: 40px auto;
+    padding: 20px 15px;
     text-align: center;
-    overflow: hidden;
-
-    border: 1px solid rgba(77,163,255,0.4);
-    box-shadow: 0 0 8px rgba(77,163,255,0.2);
-    transition: 0.3s ease;
-}
-
-.developer-box:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 0 15px rgba(77,163,255,0.3);
-}
-
-/* Ribbon */
-.dev-ribbon {
-    position: absolute;
-    top: 8px;
-    right: -28px;
-    background: #4da3ff;
-    color: #00111f;
-    padding: 4px 30px;
-    transform: rotate(45deg);
-    font-size: 9px;
-    font-weight: 600;
-    letter-spacing: 1px;
+    position: relative;
+    
+    /* Removed box properties */
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    border-radius: 0;
+    
+    /* Optional: Soft radial glow instead of a hard background box */
+    background: radial-gradient(circle, rgba(77, 163, 255, 0.08) 0%, rgba(0, 0, 0, 0) 70%);
 }
 
 /* Profile Image */
 .dev-profile img {
-    width: 65px;
-    height: 65px;
+    width: 80px;
+    height: 80px;
     border-radius: 50%;
     object-fit: cover;
-    border: 2px solid rgba(77,163,255,0.7);
-    box-shadow: 0 0 6px rgba(77,163,255,0.3);
-    margin-bottom: 12px;
-    transition: 0.3s;
+    margin-bottom: 16px;
+    
+    /* Soft cyan glow instead of a hard border */
+    border: none;
+    box-shadow: 0 0 20px rgba(77, 163, 255, 0.4);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .dev-profile img:hover {
-    transform: scale(1.05);
+    transform: scale(1.08);
+    box-shadow: 0 0 28px rgba(77, 163, 255, 0.6);
 }
 
 /* Name */
 .dev-profile h4 {
-    font-size: 18px;
-    margin-bottom: 4px;
-    color: white;
+    font-size: 20px;
+    font-weight: 600;
+    margin: 0 0 4px 0;
+    color: #ffffff;
+    letter-spacing: 0.5px;
 }
 
-/* Username */
+/* Subtitle */
 .dev-profile h5 {
     color: #4da3ff;
     font-size: 13px;
-    margin-bottom: 12px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin: 0 0 16px 0;
+    opacity: 0.9;
 }
 
-/* Description */
-.dev-profile p {
-    max-width: 240px;
-    margin: auto;
-    font-size: 11px;
-    line-height: 1.5;
-    font-weight: 400;
-    color: #ddd;
+/* Quote Description */
+.dev-profile .dev-quote {
+    max-width: 420px;
+    margin: 0 auto;
+    font-size: 13px;
+    line-height: 1.6;
+    font-weight: 300;
+    font-style: italic;
+    color: #e0e0e0;
     opacity: 0.85;
 }
 
 /* Icons */
 .dev-icons {
-    margin-top: 12px;
-    font-size: 14px;
-    color: white;
-    letter-spacing: 6px;
-    opacity: 0.8;
+    margin-top: 18px;
+    font-size: 16px;
+    color: #4da3ff;
+    letter-spacing: 12px;
 }
 
-/* Mobile */
-@media(max-width:500px) {
+/* Responsive Scaling */
+@media (max-width: 500px) {
     .developer-box {
-        padding: 12px 8px;
+        margin: 20px auto;
+        padding: 10px;
     }
 
     .dev-profile img {
-        width: 55px;
-        height: 55px;
+        width: 70px;
+        height: 70px;
     }
 
     .dev-profile h4 {
-        font-size: 16px;
+        font-size: 18px;
     }
 
     .dev-profile h5 {
+        font-size: 11px;
+    }
+
+    .dev-profile .dev-quote {
         font-size: 12px;
     }
-
-    .dev-profile p {
-        font-size: 10px;
-    }
 }
-
 
 /* Responsive Media Queries */
 @media(max-width:900px){
@@ -1250,34 +1240,25 @@ body::after{
 </div>
  <!-- ================= DEVELOPER SECTION ================= -->
 </div>
- <div class="developer-box" data-aos="zoom-in">
-
-    <div class="dev-ribbon">
-        DEVELOPER
-    </div>
-
-    <div class="dev-dot"></div>
-    <div class="dev-dot"></div>
-    <div class="dev-dot"></div>
+ <!-- ================= DEVELOPER SECTION ================= -->
+<div class="developer-box" data-aos="fade-up">
 
     <div class="dev-profile">
 
         <img src="xxx.jpeg" alt="Developer">
 
         <h4>Abhishek CK</h4>
-             
-        <h5>Site Developer </h5>
+            
+        <h5>Site Developer</h5>
 
-        <p>
-            "I designed this site as a gift to our batch.<p>
-Crafted with creativity, passion, and countless late-night coding sessions to preserve our unforgettable BCA 2026 memories forever.
-</p>
-     
+        <p class="dev-quote">
+            "I designed this site as a gift to our batch. Crafted with creativity, passion, and countless late-night coding sessions to preserve our unforgettable BCA 2026 memories forever.
+            <br><br>
             Cheers to the BCA Class of 2026!"
         </p>
 
         <div class="dev-icons">
-           
+            <!-- Add social icons here (e.g. FontAwesome) -->
         </div>
 
     </div>
