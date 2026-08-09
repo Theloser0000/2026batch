@@ -4,13 +4,11 @@
 <meta name="google-site-verification" content="..." />
 <meta charset="UTF-8">
 <meta name="viewport" content="width=1024">
-<title>EWBS BCA 2026 Batch | Farewell Memorie</title>
+<title>EWBS BCA 2026 Batch | Farewell Memories</title>
  <link rel="icon" type="image/png" href="logo.png">   
-<meta name="description" content="Official farewell  website for East West Business School (EWBS) BCA Batch of 2026. developed by Abhishek CK (theloser0000). TO txplore our journey, videos, photos, and messages.">
-
+<meta name="description" content="Official farewell website for East West Business School (EWBS) BCA Batch of 2026. Developed by Abhishek CK (theloser0000). To explore our journey, videos, photos, and messages.">
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
-
 <style>
 *{
     margin:0;
@@ -19,50 +17,47 @@
     font-family:'Poppins',sans-serif;
     scroll-behavior:smooth;
 }
-
 body{
-    background:linear-gradient(135deg,#050816,#0b1229,#111c44);
-    color:white;
-    overflow-x:hidden;
+    /* Metallic Silver Gradient Background */
+    background: linear-gradient(135deg, #e2e8f0 0%, #ffffff 40%, #cbd5e1 70%, #f1f5f9 100%);
+    color: #0f172a;
+    overflow-x: hidden;
+    position: relative;
+    min-height: 100vh;
 }
 
-/* Animated Background */
+/* Metallic Silver Ambient Shimmer Orbs */
 body::before{
     content:'';
     position:fixed;
-    width:600px;
-    height:600px;
-    background:rgba(77,163,255,0.12);
-    border-radius:50%;
+    width:750px;
+    height:750px;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.8) 0%, rgba(203, 213, 225, 0.3) 50%, transparent 70%);
     top:-250px;
     left:-150px;
-    filter:blur(100px);
-    animation:move1 12s infinite alternate;
+    filter:blur(60px);
+    animation:move1 15s infinite alternate ease-in-out;
     z-index:-1;
 }
-
 body::after{
     content:'';
     position:fixed;
-    width:500px;
-    height:500px;
-    background:rgba(0,255,255,0.08);
-    border-radius:50%;
+    width:650px;
+    height:650px;
+    background: radial-gradient(circle, rgba(212, 175, 55, 0.15) 0%, rgba(255, 255, 255, 0) 70%);
     bottom:-200px;
     right:-120px;
-    filter:blur(100px);
-    animation:move2 12s infinite alternate;
+    filter:blur(70px);
+    animation:move2 15s infinite alternate ease-in-out;
     z-index:-1;
 }
-
 @keyframes move1{
-    from{transform:translateY(0px);}
-    to{transform:translateY(100px);}
+    0%{transform: translateY(0px) scale(1);}
+    100%{transform: translateY(120px) scale(1.1);}
 }
-
 @keyframes move2{
-    from{transform:translateX(0px);}
-    to{transform:translateX(-100px);}
+    0%{transform: translateX(0px) scale(1);}
+    100%{transform: translateX(-120px) scale(1.15);}
 }
 
 .container{
@@ -71,191 +66,208 @@ body::after{
     padding:40px 20px;
 }
 
-/* Navbar */
+/* Floating Glass Navbar with Gold Accent */
 .navbar{
     position:sticky;
-    top:15px;
+    top:20px;
     z-index:1000;
     display:flex;
     justify-content:center;
-    margin-bottom:40px;
+    margin-bottom:50px;
 }
-
 .navbar ul{
     display:flex;
-    gap:20px;
+    gap:25px;
     list-style:none;
-    padding:15px 25px;
-    background:rgba(255,255,255,0.08);
-    border:1px solid rgba(255,255,255,0.1);
+    padding:14px 32px;
+    background: rgba(255, 255, 255, 0.85);
+    border: 2px solid #d4af37; /* Metallic Gold */
     border-radius:50px;
-    backdrop-filter:blur(10px);
+    backdrop-filter:blur(16px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08), 0 0 15px rgba(212, 175, 55, 0.2);
 }
-
 .navbar a{
     text-decoration:none;
-    color:white;
+    color:#1e293b;
     font-size:14px;
-    transition:0.3s;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    letter-spacing: 0.5px;
 }
-
 .navbar a:hover{
-    color:#4da3ff;
+    color:#b8860b;
+    text-shadow: 0 0 10px rgba(212, 175, 55, 0.4);
 }
 
-/* Header */
+/* Vivid Header with Gold & Deep Slate Text */
 .header{
     text-align:center;
-    margin-top:40px;
-    margin-bottom:70px;
+    margin-top:20px;
+    margin-bottom:80px;
 }
-
 .college-name{
-    color:#4da3ff;
-    letter-spacing:3px;
+    color:#b8860b;
+    letter-spacing:4px;
     margin-bottom:15px;
-    font-size:18px;
+    font-size:16px;
+    font-weight: 700;
+    text-transform: uppercase;
 }
-
 .header h1{
-    font-size:80px;
-    background:linear-gradient(to right,#4da3ff,#ffffff);
+    font-size:84px;
+    font-weight: 700;
+    background: linear-gradient(135deg, #0f172a 20%, #d4af37 60%, #b8860b 100%);
     -webkit-background-clip:text;
     -webkit-text-fill-color:transparent;
+    letter-spacing: -1px;
+    line-height: 1.1;
+    filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));
 }
-
 .header p{
     margin-top:20px;
-    opacity:0.85;
+    color: #334155;
     font-size:20px;
     line-height:1.8;
 }
-
 .quote{
     margin-top:25px;
-    font-size:18px;
-    color:#9ecbff;
+    font-size:20px;
+    color:#855812;
     font-style:italic;
+    font-weight: 500;
 }
 
-/* Group Photo */
+/* Group Photo Box */
 .group-photo{
     text-align:center;
 }
-
 .group-photo img{
     width:90%;
-    max-width:750px;
-    border-radius:35px;
-    border:3px solid rgba(255,255,255,0.1);
-    box-shadow:0 0 40px rgba(77,163,255,0.3);
-    transition:0.4s;
+    max-width:850px;
+    border-radius:28px;
+    border: 3px solid #d4af37;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.12), 0 0 20px rgba(212, 175, 55, 0.25);
+    transition: all 0.5s ease;
 }
-
 .group-photo img:hover{
-    transform:scale(1.02);
+    transform: scale(1.02);
+    box-shadow: 0 25px 50px rgba(212, 175, 55, 0.4);
 }
-
 .group-photo h2{
-    margin-top:30px;
-    font-size:40px;
-    color:#4da3ff;
+    margin-top:35px;
+    font-size:42px;
+    color:#b8860b;
+    letter-spacing: 0.5px;
+    font-weight: 700;
 }
-
 .group-photo h4{
-    margin-top:20px;
-    opacity:0.85;
-    font-weight:300;
-    line-height:1.9;
+    margin-top:15px;
+    color: #334155;
+    font-weight:500;
+    line-height:1.8;
     font-size:18px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-/* Names Box */
+/* Names Ticker Box */
 .names-box{
     max-width:1100px;
     margin:40px auto;
-    background:rgba(255,255,255,0.06);
-    border:1px solid rgba(255,255,255,0.08);
-    border-radius:30px;
-    padding:40px;
+    background: rgba(255, 255, 255, 0.75);
+    border: 2px solid #d4af37;
+    border-radius:24px;
+    padding:20px 30px;
     text-align:center;
     line-height:2.4;
     font-size:18px;
-    backdrop-filter:blur(10px);
-    box-shadow:0 0 30px rgbaf(77,163,255,0.08);
+    backdrop-filter:blur(12px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.06), 0 0 15px rgba(212, 175, 55, 0.15);
+    color: #0f172a;
+    font-weight: 600;
 }
 
-/* Section */
+/* Section Headlines */
 .section-title{
     text-align:center;
-    font-size:40px;
-    margin:90px 0 40px;
-    color:#4da3ff;
+    font-size:44px;
+    font-weight: 700;
+    margin:100px 0 50px;
+    background: linear-gradient(135deg, #1e293b, #d4af37);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
-
 .grid{
     display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
-    gap:30px;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:35px;
 }
 
-/* Single Feature Block Configuration (Centered layouts) */
+/* Single Feature Block Configuration */
 .single-feature-block {
     display: flex;
     justify-content: center;
     margin: 0 auto;
     max-width: 900px;
 }
-
 .card{
-    background:rgba(255,255,255,0.06);
-    border:1px solid rgba(255,255,255,0.08);
-    border-radius:30px;
-    padding:30px;
+    background: rgba(255, 255, 255, 0.8);
+    border: 2px solid #d4af37;
+    border-radius:28px;
+    padding:35px 30px;
     text-align:center;
-    backdrop-filter:blur(12px);
-    transition:0.4s;
-    box-shadow:0 0 20px rgba(77,163,255,0.08);
+    backdrop-filter:blur(14px);
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.06), 0 0 15px rgba(212, 175, 55, 0.15);
     width: 100%;
+    position: relative;
+    overflow: hidden;
 }
-
+.card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, #d4af37, transparent);
+}
 .card:hover{
-    transform:translateY(-10px) scale(1.02);
-    box-shadow:0 0 35px rgba(77,163,255,0.25);
+    transform: translateY(-8px);
+    border-color: #f59e0b;
+    box-shadow: 0 20px 45px rgba(0,0,0,0.12), 0 0 30px rgba(212, 175, 55, 0.35);
 }
-
 .card img{
     width:130px;
     height:130px;
     border-radius:50%;
     object-fit:cover;
-    border:3px solid #4da3ff;
-    margin-bottom:18px;
-    transition:0.4s;
+    border: 3px solid #d4af37;
+    margin-bottom:20px;
+    transition: all 0.4s ease;
+    box-shadow: 0 0 20px rgba(212, 175, 55, 0.3);
 }
-
-/* Modern widescreen update for the building focus card */
 .card img.college-landscape {
     width: 100%;
     max-width: 550px;
-    height: 220px;
+    height: 240px;
     border-radius: 20px;
     object-fit: cover;
+    border: 2px solid #d4af37;
 }
-
 .card img:hover{
-    transform:scale(1.04);
-    box-shadow:0 0 30px #4da3ff;
+    transform:scale(1.05);
+    box-shadow:0 0 30px rgba(212, 175, 55, 0.5);
 }
-
 .card h3{
-    margin-bottom:10px;
+    margin-bottom:12px;
     font-size:22px;
+    font-weight: 700;
+    color: #0f172a;
 }
-
 .card p{
-    opacity:0.8;
-    line-height:1.7;
+    line-height:1.75;
+    font-size: 15px;
+    color: #334155;
 }
 
 /* Timeline */
@@ -264,608 +276,415 @@ body::after{
     margin:auto;
     position:relative;
 }
-
 .timeline::before{
     content:'';
     position:absolute;
     left:50%;
-    width:4px;
+    width:3px;
     height:100%;
-    background:#4da3ff;
+    background: linear-gradient(180deg, #d4af37, #b8860b);
     transform:translateX(-50%);
+    box-shadow: 0 0 12px rgba(212, 175, 55, 0.4);
 }
-
 .timeline-item{
     width:50%;
     padding:20px 40px;
     position:relative;
 }
-
 .timeline-item:nth-child(odd){
     left:0;
     text-align:right;
 }
-
 .timeline-item:nth-child(even){
     left:50%;
 }
-
 .timeline-content{
-    background:rgba(255,255,255,0.06);
-    padding:25px;
-    border-radius:20px;
-    border:1px solid rgba(255,255,255,0.08);
-    backdrop-filter:blur(10px);
+    background: rgba(255, 255, 255, 0.85);
+    padding:28px;
+    border-radius:24px;
+    border: 2px solid #d4af37;
+    backdrop-filter:blur(12px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+    transition: 0.3s ease;
 }
-
+.timeline-content:hover {
+    border-color: #f59e0b;
+    transform: translateY(-3px);
+    box-shadow: 0 12px 35px rgba(212, 175, 55, 0.25);
+}
 .timeline-content h3{
-    color:#4da3ff;
+    color:#b8860b;
     margin-bottom:10px;
+    font-size: 24px;
+    font-weight: 700;
+}
+.timeline-content p {
+    color: #334155;
+    line-height: 1.6;
 }
 
-/* Unified Memory Gallery */
+/* Gallery Masonry Grid */
 .gallery{
     column-count:3;
     column-gap:20px;
 }
-
-/* Base style for both images and videos in gallery */
 .gallery-item {
-    display: inline-block; /* Crucial for masonry column layout */
+    display: inline-block;
     width: 100%;
     margin-bottom: 20px;
-    border-radius: 25px;
-    border: 2px solid rgba(255,255,255,0.08);
-    transition: 0.4s ease;
-    overflow: hidden; /* Keeps video/image within rounded border */
+    border-radius: 20px;
+    border: 2px solid #d4af37;
+    transition: all 0.4s ease;
+    overflow: hidden;
+    background: rgba(255, 255, 255, 0.7);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
 }
-
 .gallery-item:hover {
-    transform: scale(1.04);
-    box-shadow: 0 0 30px rgba(77,163,255,0.25);
-    border-color: rgba(77,163,255,0.5);
+    transform: scale(1.03);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.12), 0 0 25px rgba(212, 175, 55, 0.35);
+    border-color: #f59e0b;
 }
-
 .gallery-item img {
     width: 100%;
     display: block;
     height: auto;
 }
-
-/* Custom styling for embedded gallery videos */
 .gallery-video-wrapper {
     position: relative;
     width: 100%;
     overflow: hidden;
     background: black;
 }
-
 .gallery-video-wrapper video {
     width: 100%;
     height: 100%;
     display: block;
     object-fit: cover;
 }
-
-/* Unique Mute/Unmute Overlay for videos within the unified gallery */
 .gallery-video-overlay {
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    background: rgba(0,0,0,0.1);
-    opacity: 0; /* Hidden by default */
+    background: rgba(0,0,0,0.25);
+    opacity: 0;
     transition: 0.3s ease;
     cursor: pointer;
     z-index: 2;
 }
-
 .gallery-item:hover .gallery-video-overlay {
-    opacity: 1; /* Shows only on hover of that item */
+    opacity: 1;
 }
-
 .gallery-mute-btn {
-    background: rgba(77,163,255,0.9);
+    background: linear-gradient(135deg, #d4af37, #b8860b);
     color: white;
     border: none;
-    padding: 10px 18px;
+    padding: 10px 20px;
     border-radius: 30px;
     font-size: 13px;
-    font-weight: 500;
-    backdrop-filter: blur(5px);
+    font-weight: 600;
+    backdrop-filter: blur(8px);
     transition: 0.2s;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
 }
 
 /* Quote Box */
 .memory-quote{
-    margin:90px auto;
+    margin:100px auto;
     max-width:900px;
     text-align:center;
-    font-size:28px;
-    line-height:1.8;
-    color:#d7eaff;
+    font-size:30px;
+    line-height:1.7;
+    color:#b8860b;
     font-style:italic;
+    font-weight: 500;
 }
 
 /* Floating Music Button */
 .music-btn{
     position:fixed;
-    right:25px;
-    bottom:25px;
-    width:75px;
-    height:75px;
-    border:none;
+    right:30px;
+    bottom:30px;
+    width:65px;
+    height:65px;
+    border: 2px solid #ffffff;
     border-radius:50%;
-    background:linear-gradient(135deg,#4da3ff,#00d4ff);
+    background: linear-gradient(135deg, #d4af37, #855812);
     color:white;
-    font-size:32px;
+    font-size:26px;
     cursor:pointer;
     z-index:9999;
-    box-shadow:0 0 20px rgba(77,163,255,0.6), 0 0 40px rgba(77,163,255,0.5);
-    transition:0.3s;
+    box-shadow:0 10px 25px rgba(212, 175, 55, 0.4);
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
-
 .music-btn:hover{
-    transform:scale(1.15);
-    box-shadow:0 0 30px rgba(77,163,255,0.9), 0 0 60px rgba(77,163,255,0.7);
+    transform:scale(1.12);
+    box-shadow:0 15px 35px rgba(212, 175, 55, 0.6);
 }
 
-/* Footer */
+/* Footer & Developer Section */
 .footer{
     text-align:center;
     margin-top:100px;
     padding-bottom:40px;
-    opacity:0.8;
+    color:#334155;
     font-size:16px;
 }
-
 .footer span{
-    color:#4da3ff;
+    color:#b8860b;
 }
-/* ================= DEVELOPER SECTION ================= */
-/* ================= FLOATING / UNBORDERED DEVELOPER SECTION ================= */
 
 .developer-box {
     width: 100%;
-    max-width: 500px;
-    margin: 40px auto;
-    padding: 20px 15px;
+    max-width: 550px;
+    margin: 50px auto;
+    padding: 25px 20px;
     text-align: center;
     position: relative;
-    
-    /* Removed box properties */
-    background: transparent;
-    border: none;
-    box-shadow: none;
-    border-radius: 0;
-    
-    /* Optional: Soft radial glow instead of a hard background box */
-    background: radial-gradient(circle, rgba(77, 163, 255, 0.08) 0%, rgba(0, 0, 0, 0) 70%);
+    background: rgba(255, 255, 255, 0.6);
+    border: 2px solid #d4af37;
+    border-radius: 28px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05), 0 0 20px rgba(212, 175, 55, 0.15);
 }
-
-/* Profile Image */
 .dev-profile img {
-    width: 80px;
-    height: 80px;
+    width: 85px;
+    height: 85px;
     border-radius: 50%;
     object-fit: cover;
     margin-bottom: 16px;
-    
-    /* Soft cyan glow instead of a hard border */
-    border: none;
-    box-shadow: 0 0 20px rgba(77, 163, 255, 0.4);
+    border: 2px solid #d4af37;
+    box-shadow: 0 0 25px rgba(212, 175, 55, 0.4);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-
 .dev-profile img:hover {
     transform: scale(1.08);
-    box-shadow: 0 0 28px rgba(77, 163, 255, 0.6);
+    box-shadow: 0 0 35px rgba(212, 175, 55, 0.6);
 }
-
-/* Name */
 .dev-profile h4 {
-    font-size: 20px;
-    font-weight: 600;
+    font-size: 22px;
+    font-weight: 700;
     margin: 0 0 4px 0;
-    color: #ffffff;
-    letter-spacing: 0.5px;
+    color: #0f172a;
 }
-
-/* Subtitle */
 .dev-profile h5 {
-    color: #4da3ff;
+    color: #b8860b;
     font-size: 13px;
-    font-weight: 500;
+    font-weight: 700;
     text-transform: uppercase;
-    letter-spacing: 1.5px;
+    letter-spacing: 2px;
     margin: 0 0 16px 0;
-    opacity: 0.9;
 }
-
-/* Quote Description */
 .dev-profile .dev-quote {
-    max-width: 420px;
+    max-width: 440px;
     margin: 0 auto;
     font-size: 13px;
     line-height: 1.6;
-    font-weight: 300;
+    font-weight: 500;
     font-style: italic;
-    color: #e0e0e0;
-    opacity: 0.85;
+    color: #334155;
 }
-
-/* Icons */
 .dev-icons {
     margin-top: 18px;
     font-size: 16px;
-    color: #4da3ff;
+    color: #b8860b;
     letter-spacing: 12px;
 }
 
-/* Responsive Scaling */
-@media (max-width: 500px) {
-    .developer-box {
-        margin: 20px auto;
-        padding: 10px;
-    }
-
-    .dev-profile img {
-        width: 70px;
-        height: 70px;
-    }
-
-    .dev-profile h4 {
-        font-size: 18px;
-    }
-
-    .dev-profile h5 {
-        font-size: 11px;
-    }
-
-    .dev-profile .dev-quote {
-        font-size: 12px;
-    }
-}
-
-/* Responsive Media Queries */
-@media(max-width:900px){
-    .gallery{
-        column-count:2;
-    }
-}
-
-@media(max-width:600px){
-    .gallery{
-        column-count:1;
-    }
-    .header h1{
-        font-size:50px;
-    }
-    .section-title{
-        font-size:32px;
-    }
-    .timeline::before{
-        left:20px;
-    }
-    .timeline-item{
-        width:100%;
-        padding-left:60px;
-        padding-right:10px;
-        text-align:left !important;
-        left:0 !important;
-    }
-    .navbar ul{
-        gap:10px;
-        padding:12px 18px;
-    }
-    .navbar a{
-        font-size:12px;
-    }
-    .memory-quote{
-        font-size:22px;
-    }
-}
- /* ================= WELCOME POPUP ================= */
-
+/* Modals & Popups */
 .welcome-popup{
-
     position:fixed;
     inset:0;
-
-    background:rgba(0,0,0,0.8);
-
-    backdrop-filter:blur(12px);
-
+    background:rgba(226, 232, 240, 0.85);
+    backdrop-filter:blur(16px);
     display:flex;
     justify-content:center;
     align-items:center;
-
     z-index:999999;
-
     overflow:hidden;
 }
-
 .welcome-box{
-
     width:90%;
-    max-width:650px;
-
-    padding:55px 35px;
-
+    max-width:600px;
+    padding:50px 35px;
     text-align:center;
-
-    border-radius:35px;
-
-    background:rgba(255,255,255,0.05);
-
-    border:1px solid rgba(255,255,255,0.15);
-
-    box-shadow:
-    0 0 25px rgba(77,163,255,0.25),
-    0 0 70px rgba(77,163,255,0.15);
-
-    animation:popupAnim 1s ease;
+    border-radius:32px;
+    background: rgba(255, 255, 255, 0.9);
+    border: 2px solid #d4af37;
+    box-shadow: 0 25px 60px rgba(0,0,0,0.1), 0 0 30px rgba(212, 175, 55, 0.25);
+    animation:popupAnim 0.8s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
-
 .welcome-box h1{
-
-    font-size:52px;
-
-    margin-bottom:20px;
-
-    background:linear-gradient(to right,#4da3ff,#ffffff);
-
+    font-size:48px;
+    font-weight: 700;
+    margin-bottom:18px;
+    background: linear-gradient(135deg, #0f172a, #d4af37);
     -webkit-background-clip:text;
     -webkit-text-fill-color:transparent;
 }
-
 .welcome-box p{
-
-    font-size:18px;
-
-    line-height:1.9;
-
-    opacity:0.9;
+    font-size:17px;
+    line-height:1.8;
+    color: #334155;
 }
-
 .welcome-box button{
-
-    margin-top:30px;
-
-    padding:14px 38px;
-
+    margin-top:32px;
+    padding:14px 40px;
     border:none;
-
     border-radius:50px;
-
-    background:linear-gradient(135deg,#4da3ff,#00d4ff);
-
+    background: linear-gradient(135deg, #d4af37, #855812);
     color:white;
-
     font-size:16px;
     font-weight:600;
-
     cursor:pointer;
-
     transition:0.3s;
+    box-shadow: 0 10px 25px rgba(212, 175, 55, 0.35);
 }
-
 .welcome-box button:hover{
-
-    transform:scale(1.08);
-
-    box-shadow:
-    0 0 30px rgba(77,163,255,0.5);
+    transform:scale(1.05);
+    box-shadow: 0 15px 35px rgba(212, 175, 55, 0.5);
 }
-
 @keyframes popupAnim{
-
-    from{
-        transform:scale(0.6);
-        opacity:0;
-    }
-
-    to{
-        transform:scale(1);
-        opacity:1;
-    }
-
+    from{ transform:scale(0.8); opacity:0; }
+    to{ transform:scale(1); opacity:1; }
 }
-
-/* Blast Animation */
 
 .blast{
-
     position:absolute;
-
     width:15px;
     height:15px;
-
     border-radius:50%;
-
-    background:#4da3ff;
-
-    box-shadow:0 0 20px #4da3ff;
-
+    background:#d4af37;
+    box-shadow:0 0 20px #d4af37;
     animation:blastAnim 2s infinite;
 }
-
-.blast1{
-    top:20%;
-    left:20%;
-}
-
-.blast2{
-    top:30%;
-    right:20%;
-    animation-delay:0.7s;
-}
-
-.blast3{
-    bottom:20%;
-    left:50%;
-    animation-delay:1.3s;
-}
-
+.blast1{ top:20%; left:20%; }
+.blast2{ top:30%; right:20%; animation-delay:0.7s; }
+.blast3{ bottom:20%; left:50%; animation-delay:1.3s; }
 @keyframes blastAnim{
-
-    0%{
-        transform:scale(0);
-        opacity:1;
-    }
-
-    100%{
-        transform:scale(14);
-        opacity:0;
-    }
-
+    0%{ transform:scale(0); opacity:1; }
+    100%{ transform:scale(14); opacity:0; }
 }
 
-/* Mobile */
-
-@media(max-width:600px){
-
-    .welcome-box h1{
-        font-size:34px;
-    }
-
-    .welcome-box p{
-        font-size:15px;
-    }
-
-}
- /* =========================
-   GALLERY LOCK SYSTEM
-========================= */
-
+/* Lock Screen */
 .lock-screen{
     display:flex;
     justify-content:center;
     align-items:center;
     margin:50px auto;
 }
-
 .lock-box{
-
     width:90%;
     max-width:400px;
-
     padding:40px;
-
-    border-radius:25px;
-
-    background:rgba(255,255,255,0.05);
-
-    border:1px solid rgba(255,255,255,0.1);
-
+    border-radius:28px;
+    background: rgba(255, 255, 255, 0.85);
+    border: 2px solid #d4af37;
     text-align:center;
-
-    backdrop-filter:blur(12px);
-
-    box-shadow:0 0 30px rgba(77,163,255,0.15);
+    backdrop-filter:blur(14px);
+    box-shadow:0 20px 40px rgba(0,0,0,0.08), 0 0 20px rgba(212, 175, 55, 0.2);
 }
-
 .lock-box h2{
-    color:#4da3ff;
-    margin-bottom:15px;
+    color:#b8860b;
+    margin-bottom:12px;
+    font-size: 24px;
+    font-weight: 700;
 }
-
 .lock-box p{
-    opacity:0.8;
     margin-bottom:20px;
+    color: #334155;
 }
-
 .lock-box input{
-
     width:100%;
-
-    padding:14px;
-
-    border:none;
-
+    padding:14px 18px;
+    border: 2px solid #cbd5e1;
     outline:none;
-
-    border-radius:12px;
-
-    margin-bottom:18px;
-
-    background:rgba(255,255,255,0.08);
-
-    color:white;
-
+    border-radius:14px;
+    margin-bottom:20px;
+    background: rgba(255, 255, 255, 0.95);
+    color:#0f172a;
     font-size:15px;
+    transition: 0.3s;
 }
-
+.lock-box input:focus {
+    border-color: #d4af37;
+    box-shadow: 0 0 15px rgba(212, 175, 55, 0.3);
+}
 .lock-box button{
-
     width:100%;
-
     padding:14px;
-
     border:none;
-
-    border-radius:12px;
-
-    background:linear-gradient(135deg,#4da3ff,#00d4ff);
-
+    border-radius:14px;
+    background: linear-gradient(135deg, #d4af37, #855812);
     color:white;
-
     font-size:15px;
-
     font-weight:600;
-
     cursor:pointer;
-
     transition:0.3s;
+    box-shadow: 0 8px 20px rgba(212, 175, 55, 0.3);
 }
-
 .lock-box button:hover{
-    transform:scale(1.03);
+    transform:translateY(-2px);
+    box-shadow: 0 12px 25px rgba(212, 175, 55, 0.45);
+}
+#errorText{
+    color:#e11d48;
+    margin-top:12px;
+    font-size: 14px;
+    font-weight: 600;
 }
 
-#errorText{
-    color:#ff4d6d;
-    margin-top:10px;
+/* Responsive Rules */
+@media(max-width:900px){
+    .gallery{ column-count:2; }
 }
- 
+@media(max-width:600px){
+    .gallery{ column-count:1; }
+    .header h1{ font-size:46px; }
+    .section-title{ font-size:32px; }
+    .timeline::before{ left:20px; }
+    .timeline-item{
+        width:100%;
+        padding-left:50px;
+        padding-right:10px;
+        text-align:left !important;
+        left:0 !important;
+    }
+    .navbar ul{ gap:12px; padding:10px 20px; }
+    .navbar a{ font-size:13px; }
+    .memory-quote{ font-size:20px; }
+    .welcome-box h1{ font-size:32px; }
+    .welcome-box p{ font-size:14px; }
+    .developer-box { margin:20px auto; padding:10px; }
+    .dev-profile img { width:70px; height:70px; }
+    .dev-profile h4 { font-size:18px; }
+    .dev-profile h5 { font-size:11px; }
+    .dev-profile .dev-quote { font-size:12px; }
+}
 </style>
 </head>
 <body>
  <!-- Welcome Popup -->
 <div class="welcome-popup" id="welcomePopup">
-
     <div class="blast blast1"></div>
     <div class="blast blast2"></div>
     <div class="blast blast3"></div>
-
     <div class="welcome-box">
-
         <h1>Welcome </h1>
-
         <p>
             Relive the unforgettable memories, friendship and beautiful moments of EWBS BCA Batch 2026.
         </p>
-
         <button onclick="closeWelcome()">
             Enter Website
         </button>
-
     </div>
-
 </div>
-
 <audio id="bgmusic" loop autoplay>
     <source src="music.mp3" type="audio/mp3">
 </audio>
-
 <button class="music-btn" onclick="toggleMusic()">🎵</button>
-
 <div class="container">
-
 <nav class="navbar">
     <ul>
         <li><a href="#home">Home</a></li>
@@ -875,13 +694,11 @@ body::after{
         <li><a href="#gallery">Gallery</a></li>
     </ul>
 </nav>
-
 <div class="header" id="home" data-aos="fade-up">
     <div class="college-name">EAST WEST BUSINESS SCHOOL</div>
     <h1>BCA 2026 BATCH </h1>
     <div class="quote">“Every ending creates a beautiful memory.”</div>
 </div>
-
 <div class="group-photo" id="family" data-aos="zoom-in">
     <h4>
         Three years filled with memories, laughter, assignments,
@@ -903,11 +720,9 @@ body::after{
     </marquee>
 </div>
 </div>
-
 <div class="memory-quote" data-aos="fade-up">
     “Some people come into our life and leave footprints forever.”
 </div>
-
 <h2 class="section-title" id="timeline">Journey Timeline</h2>
 <div class="timeline">
     <div class="timeline-item" data-aos="fade-right">
@@ -943,8 +758,6 @@ body::after{
 - Our Founder</h3>
         <p>
            Late Shri. C M Nagaraj, Founder Chairman of East West Institutions & Former Mayor of BBMP deserves the due respect of immortals for he lives and reigns in the hearts of many through his service and passion by education. He founded East West Institutions in 1968 with an extreme vision to propose quality based technical education to those who were depressed due to poverty, social status and many other causes.
-
-
             <br>
            -Punith km
         </p>
@@ -962,7 +775,6 @@ body::after{
         </p>
     </div>
 </div>
-
 <h2 class="section-title" id="lecturers" data-aos="fade-up">Lecturers</h2>
 <div class="grid">
     <div class="card" data-aos="fade-up">
@@ -1011,29 +823,23 @@ body::after{
         <p>Computer science Department<br>“ We will always remember your teaching and encouragement. Your kindness and support created beautiful memories for all of us”<br>-Ganavi & Shewtha </p>
     </div>
 </div>
-
 </div>
-
 <h2 class="section-title" data-aos="fade-up">About the College</h2>
 <div class="single-feature-block">
     <div class="card" data-aos="zoom-in">
         <img class="college-landscape" src="vv.jpeg" alt="East West Business School Campus">
         <h3>EAST WEST BUSINESS SCHOOL</h3>
         <p>
-            East West Business School has been a foundational pillar of academic excellence, equipping students with state-of-the-art infrastructure, dynamic data labs, and an open environment for holistic growth.  We proudly carry the principles, knowledge, and values learned here forever.
+            East West Business School has been a foundational pillar of academic excellence, equipping students with state-of-the-art infrastructure, dynamic data labs, and an open environment for holistic growth. We proudly carry the principles, knowledge, and values learned here forever.
             <br><br><strong>- Vijayalakshmi V & Kirana M</strong>
         </p>
     </div>
 </div>
-
-
-
  <div style="text-align:center; margin-top:40px;">
-
     <a href="https://chat2026ewbs.lovable.app/" target="_blank"
     style="
     display:inline-block;
-    background:linear-gradient(45deg,#ff6b6b,#6c5ce7);
+    background:linear-gradient(135deg, #d4af37, #855812);
     color:white;
     padding:15px 35px;
     border-radius:40px;
@@ -1041,15 +847,14 @@ body::after{
     font-family:Arial,sans-serif;
     font-size:18px;
     font-weight:bold;
-    box-shadow:0 8px 20px rgba(0,0,0,0.3);
+    box-shadow:0 8px 20px rgba(212, 175, 55, 0.35);
+    border: 2px solid #ffffff;
     transition:0.3s;
     ">
     💬 Open Chat
     </a>
-
 </div>
  <div style="max-width:900px; margin:60px auto; text-align:center;" data-aos="zoom-in">
-
     <video
         controls
         playsinline
@@ -1058,61 +863,48 @@ body::after{
         style="
             width:100%;
             border-radius:25px;
-            box-shadow:0 0 35px rgba(77,163,255,0.25);
-            border:2px solid rgba(255,255,255,0.08);
+            box-shadow:0 10px 35px rgba(0, 0, 0, 0.12), 0 0 20px rgba(212, 175, 55, 0.3);
+            border:3px solid #d4af37;
         "
     >
         <source src="farewell.mp4" type="video/mp4">
         Your browser does not support video.
     </video>
-
     <p style="
         margin-top:20px;
         font-size:18px;
-        color:#9ecbff;
+        color:#b8860b;
         font-style:italic;
+        font-weight: 600;
     ">
-        One last look at the memories we made together 💙
+        One last look at the memories we made together 💛
     </p>
-
 </div>
  
-
 <h2 class="section-title" id="gallery" data-aos="fade-up">
     Memory Gallery
 </h2>
-
 <!-- LOCK SCREEN -->
 <div id="galleryLockScreen" class="lock-screen">
-
     <div class="lock-box">
-
         <h2>🔒 Private Gallery</h2>
-
         <p>Enter access code to view gallery</p>
-
         <input 
             type="password" 
             id="galleryCode" 
             placeholder="Enter Access Code"
         >
-
         <button onclick="unlockGallery()">
             Unlock Gallery
         </button>
-
         <p id="errorText"></p>
-
     </div>
-
 </div>
-
 <!-- MAIN GALLERY -->
 <div class="gallery" id="mainGallery" style="display:none;">
     <div class="gallery-item" data-aos="zoom-in">
         <img src="up90.jpeg" alt="Class Memory">
     </div>
-
     <div class="gallery-item" data-aos="zoom-in">
         <div class="gallery-video-wrapper">
             <video src="video1.mp4" loop autoplay muted playsinline class="gallery-video-player"></video>
@@ -1129,7 +921,6 @@ body::after{
     <div class="gallery-item" data-aos="zoom-in">
         <img src="up1.jpeg" alt="Class Memory">
     </div>
-
     <div class="gallery-item" data-aos="zoom-in">
         <div class="gallery-video-wrapper">
             <video src="video2.mp4" loop autoplay muted playsinline class="gallery-video-player"></video>
@@ -1138,20 +929,15 @@ body::after{
             </div>
         </div>
     </div>
-
  <div class="gallery-item" data-aos="zoom-in"><img src="up87.jpeg" alt="Memory"></div>
  <div class="gallery-item" data-aos="zoom-in"><img src="up88.jpeg" alt="Memory"></div>
 <div class="gallery-item" data-aos="zoom-in"><img src="up89.jpeg" alt="Memory"></div>
-
 <div class="gallery-item" data-aos="zoom-in"><img src="up91.jpeg" alt="Memory"></div>
 <div class="gallery-item" data-aos="zoom-in"><img src="up92.jpeg" alt="Memory"></div>
 <div class="gallery-item" data-aos="zoom-in"><img src="up93.jpeg" alt="Memory"></div>
 <div class="gallery-item" data-aos="zoom-in"><img src="up94.jpeg" alt="Memory"></div>
 <div class="gallery-item" data-aos="zoom-in"><img src="up95.jpeg" alt="Memory"></div>
 <div class="gallery-item" data-aos="zoom-in"><img src="up96.jpeg" alt="Memory"></div>
-
-
-
     <div class="gallery-item" data-aos="zoom-in"><img src="up4.jpeg" alt="Memory"></div>
     <div class="gallery-item" data-aos="zoom-in"><img src="up5.jpeg" alt="Memory"></div>
     <div class="gallery-item" data-aos="zoom-in"><img src="up6.jpeg" alt="Memory"></div>
@@ -1181,7 +967,6 @@ body::after{
     <div class="gallery-item" data-aos="zoom-in"><img src="up30.jpeg" alt="Memory"></div>
     <div class="gallery-item" data-aos="zoom-in"><img src="up31.jpeg" alt="Memory"></div>
    
-
  <div class="gallery-item" data-aos="zoom-in"><img src="up34.jpeg" alt="Memory"></div>
  <div class="gallery-item" data-aos="zoom-in"><img src="up35.jpeg" alt="Memory"></div>
  <div class="gallery-item" data-aos="zoom-in"><img src="up36.jpeg" alt="Memory"></div>
@@ -1220,7 +1005,6 @@ body::after{
  <div class="gallery-item" data-aos="zoom-in"><img src="up69.jpeg" alt="Memory"></div>
   <div class="gallery-item" data-aos="zoom-in"><img src="up70.jpeg" alt="Memory"></div>
  <div class="gallery-item" data-aos="zoom-in"><img src="up71.jpeg" alt="Memory"></div>
-
  <div class="gallery-item" data-aos="zoom-in"><img src="up73.jpeg" alt="Memory"></div>
  <div class="gallery-item" data-aos="zoom-in"><img src="up74.jpeg" alt="Memory"></div>
  <div class="gallery-item" data-aos="zoom-in"><img src="up75.jpeg" alt="Memory"></div>
@@ -1242,36 +1026,27 @@ body::after{
 </div>
  <!-- ================= DEVELOPER SECTION ================= -->
 <div class="developer-box" data-aos="fade-up">
-
     <div class="dev-profile">
-
         <img src="abhi02.jpeg" alt="Developer">
-
         <h4>Abhishek CK</h4>
             
         <h5>Site Developer</h5>
-
         <p class="dev-quote">
             "I designed this site as a gift to our batch. Crafted with creativity, passion, and countless late-night coding sessions to preserve our unforgettable BCA 2026 memories forever.
             <br><br>
             Cheers to the BCA Class of 2026!"
         </p>
-
         <div class="dev-icons">
             <!-- Add social icons here (e.g. FontAwesome) -->
         </div>
-
     </div>
-
 </div>
-
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script>
 AOS.init({
     duration:1200,
     once:true
 });
-
 window.addEventListener("load", () => {
     const music = document.getElementById("bgmusic");
     music.volume = 0.5; // Set background music volume to 50%
@@ -1284,7 +1059,6 @@ window.addEventListener("load", () => {
         });
     }
 });
-
 function toggleMusic(){
     const music = document.getElementById("bgmusic");
     if(music.paused){
@@ -1293,7 +1067,6 @@ function toggleMusic(){
         music.pause();
     }
 }
-
 // Function specifically for handling videos embedded in the unified gallery
 function toggleGalleryVideoMute(overlayElement) {
     const video = overlayElement.previousElementSibling; // Selects the video tag directly before the overlay div
@@ -1312,70 +1085,48 @@ function toggleGalleryVideoMute(overlayElement) {
         // Video is unmuted, so mute it back
         video.muted = true;
         button.innerHTML = "🔊 Unmute";
-        button.style.background = "rgba(77,163,255,0.9)"; // Restore theme blue
+        button.style.background = "linear-gradient(135deg, #d4af37, #b8860b)"; // Restore gold theme
         
         // Restore background music volume
         bgMusic.volume = 0.5;
     }
 }
  /* Close Welcome Popup */
-
 function closeWelcome(){
-
     document.getElementById("welcomePopup").style.display="none";
-
 }
  /* =========================
    GALLERY LOCK SYSTEM
 ========================= */
-
 // CHANGE true or false
 const galleryLocked = true;
-
 // PASSWORD
 const secretCode = "hemamam";
-
 window.addEventListener("load", () => {
-
     const gallery = document.getElementById("mainGallery");
     const lockScreen = document.getElementById("galleryLockScreen");
-
     // IF ADMIN UNLOCKED
     if(!galleryLocked){
-
         gallery.style.display = "block";
-
         lockScreen.style.display = "none";
     }
-
 });
-
 function unlockGallery(){
-
     const enteredCode =
         document.getElementById("galleryCode").value;
-
     const gallery =
         document.getElementById("mainGallery");
-
     const errorText =
         document.getElementById("errorText");
-
     if(enteredCode === secretCode){
-
         gallery.style.display = "block";
-
         document.getElementById(
             "galleryLockScreen"
         ).style.display = "none";
-
     } else {
-
         errorText.innerHTML =
             "❌ Wrong Access Code";
-
     }
-
 }
 </script>
 </body>
